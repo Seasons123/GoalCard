@@ -22,13 +22,10 @@ var commonFn = {
     },
     /*修改指标选择信息*/
     editEvalKPI: function () {
-        if ($('#editBtn').linkbutton('options').disabled == false) {
-            commonFn.setEdit();
-            $('#saveBtn').linkbutton('enable');
-            $('#cancelBtn').linkbutton('enable');
-            $('#confirmBtn').linkbutton('enable');
-            $('#editBtn').linkbutton('disable');
-        }
+        commonFn.setEdit();
+        $('#saveBtn').removeAttr("disabled");
+        $('#confirmBtn').removeAttr("disabled");
+        $('#editBtn').attr("disabled", "disabled");
     },
     //样式控制
     cssStyleControl: function(data){

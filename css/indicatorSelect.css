@@ -112,3 +112,17 @@ input.text{
     color: #108EE9;
     font-weight: bold;
 }
+#baseInfoButton {
+    margin: 10px 0 30px 0;
+}
+#editBtn, #submitBtn, #cancelBtn {
+    padding: 2px 8px;
+    font-size: 10px;
+    margin: 0 1px;
+}
+.pe-btn {
+    background: #EDF5FF;
+    border: 1px solid #99BCEB;
+    border-radius: 5px;
+    color: #4383DD;
+}
