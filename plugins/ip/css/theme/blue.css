@@ -28,7 +28,7 @@
 .icon-buttons .icon-box{
 	display: inline-block;
     position: relative;
-    padding: 2px 5px 2px 25px;
+    padding: 4px 10px 4px 30px;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -50,6 +50,8 @@
 	position: absolute;
     left: 5px;
     top: 5px;
+    margin-top:3px;
+    margin-left:3px;
 }
 .icon-buttons .icon-enter{
 	background-position: -126px -9px;
@@ -324,6 +326,9 @@
 }
 .icon-input{
 	background-position: -36px -70px;
+}
+.icon-add{
+	background-position: -126px -9px;
 }
 .icon-delete{
 	background-position: -5px -101px;
