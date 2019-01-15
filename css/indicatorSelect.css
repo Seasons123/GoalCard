@@ -1,19 +1,19 @@
 #target_table td,th{
     height:33px;
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
 }
 #top_table td,th,#select_table td,th{
     height:38px;
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
 }
 #check_table th{
     height:50px;
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
 }
 
 #check_table td{
 
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
 }
 
 td textarea{
@@ -22,7 +22,7 @@ td textarea{
     overflow:auto;
 }
 #verifyMsg td{
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
     border-collapse:collapse;
     background:#D1EEEE;
     color:red;
@@ -33,11 +33,11 @@ td textarea{
     padding:1px 0;
 }
 #top_table,#select_table{
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
     border-collapse:collapse;
 }
 #check_table{
-    border:solid 1px #95b3d7;
+    border:1px solid #ccc;
     border-collapse:collapse;
 }
 #target_table{
@@ -94,7 +94,7 @@ input.text{
 }
 
 #suggestR1,#suggestR2,#suggestR3,#reasonR1,#reasonR2,#reasonR3,#suggestR4,#suggestR5,#suggestR6,#suggestR7,#suggestR8{
-    border: solid 1px #95b3d7;
+    border: 1px solid #ccc;
 }
 
 .name,.weight,.standard{
@@ -105,4 +105,10 @@ input.text{
 }
 .name{
     width: 59%;
+}
+/*20190115*/
+#table-name { /*标题样式*/
+    font-size: 18px;
+    color: #108EE9;
+    font-weight: bold;
 }

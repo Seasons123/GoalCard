@@ -2,271 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f3523b-ce39-4151-9710-5c9a0568c856" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ISF.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoalWhole/indicatorSelectAndFill.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoalWhole/indicatorSelectAndFill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bizSys.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/css/fileinput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/css/fileinput.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/img/loading-sm.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/js/fileinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap-file-input/js/fileinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/changeTree.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/ip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/peGrid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/peTab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/tendList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/tree.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/u.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common/u.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/indicatorSelect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/nextKpi.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/notice" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/saveTaskKpi.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/saveTaskKpiResponse.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/target.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/target_old.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/director/director.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/director/director.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/jquery/jquery-1.12.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/jquery/jquery.ztree.core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/jquery/jquery.ztree.excheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/jquery/jquery.ztree.exedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/operateData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common/peConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/commonFn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/public.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/css/bootstrap-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.hy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.rs-latin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.rs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.ua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/changeTree.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/base.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/bm.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/home.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/platformChild.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/platformTreeClose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/platformTreeOpen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/staff_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/wj1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/wj2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/zTreeStandard.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/changeTree/images/zTreeStandard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/bizSys.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/ip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/platform.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/images/iconbtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/images/ok-circle-Info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/images/remove-circle-Info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/images/ys_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/css/theme/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/image/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/image/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ip/js/ip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/changeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/easyui-lang-zh_CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/easyui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/accordion_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/calendar_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/combo_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/datagrid_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/datebox_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/layout_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/linkbutton_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/menu_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/messager_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/pagination_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/panel_tools.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/passwordbox_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/passwordbox_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/searchbox_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/slider_handle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/spinner_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tabs_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tagbox_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tree_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/validatebox_warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/jquery.easyui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/easyui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_a_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_plain_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_span_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/combo_arrow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/layout_button_left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/panel_title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_enabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_leftarrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_rightarrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/validatebox_pointer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/validatebox_warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/cancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/edit_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/edit_remove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/filesave.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/reload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/submit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/knockout/knockout-3.1.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/knockout/knockout-3.2.0.debug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/layer/skin/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/select2/select2-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/select2/select2tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/allREADME.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/tree.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/tree.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/u.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/u.core.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/u.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/css/u.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/fonts/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/1_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/1_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/diy/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/itemcancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/line_conn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/zTreeStandard.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/images/zTreeStandard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/3.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/kero-adapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/kero.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/sparrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/sparrow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-grid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill-core.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill-respond.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill-respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-polyfill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u-tree.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/js/u.min_bak.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/en-US/uui-trans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/en/uui-trans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/en_US/uui-trans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/zh-CN/uui-trans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/zh/uui-trans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/uui/locales/zh_CN/uui-trans.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/indicatorSelect.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/indicatorSelect.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" beforeDir="false" afterPath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -279,7 +17,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="indicatorSelectAndFill.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indicatorSelect.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/indicatorSelect.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>border</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -289,6 +54,8 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/indicatorSelectAndFill/indicatorSelectAndFill.html" />
+        <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" />
+        <option value="$PROJECT_DIR$/css/indicatorSelect.css" />
       </list>
     </option>
   </component>
@@ -319,6 +86,16 @@
               <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoalCard" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoalCard" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoalCard" type="462c0819:PsiDirectoryNode" />
+              <item name="goalWhole" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -328,7 +105,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/pe_work_git/df-peweb" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -359,26 +136,28 @@
       <option name="presentableId" value="Default" />
       <updated>1547448006688</updated>
       <workItem from="1547448014263" duration="2291000" />
-      <workItem from="1547454519136" duration="281000" />
+      <workItem from="1547454519136" duration="1771000" />
+      <workItem from="1547515889049" duration="4030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2572000" />
+    <option name="totallyTimeSpent" value="8092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17261904" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.330033" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.330033" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -395,6 +174,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -406,5 +195,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indicatorSelectAndFill/indicatorSelectAndFill.html" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="503" column="16" selection-start-line="503" selection-start-column="16" selection-end-line="503" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/indicatorSelect.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
