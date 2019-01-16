@@ -154,9 +154,7 @@ var commonFn = {
         //新增一行start
         var trHTML = "<tr>";
         trHTML += '<td class="cc '+ id +'Name'+ (levelNum+1) +'"><textarea id="row' + id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" ></textarea>&nbsp;' +  //名称列
-            '<a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-select" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="commonFn.showNextKPITree(this.id);return false;" group>' +
-            '  <span class="l-btn-left l-btn-icon-left"><span class="l-btn-text l-btn-empty">&nbsp;</span><span class="l-btn-icon icon-select">&nbsp;</span></span>' +
-            '</a>' +
+            '<a class="iconmenu icon-view-detail radioButton"  id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="commonFn.showNextKPITree(this.id)" title="查看"></a>' +
             '</td>';
         trHTML += '<td class="cc '+ id + 'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
         trHTML += '<td class="aa '+ id + 'Standard" colspan="5"><textarea id="row' + id + 'colStandard'+ commonFn.random(1,100000) +'" class="easyui-validatebox standard" required="true" onchange="" ></textarea></td>';//评分标准列
@@ -370,14 +368,12 @@ var commonFn = {
         $('.name').attr("disabled", "disabled").css("background-color", "#f8f8f8");
         $('.weight').attr("disabled", "disabled").css("background-color", "#f8f8f8");
         $('.standard').attr("disabled", "disabled").css("background-color", "#f8f8f8");
-        $(".radioButton").attr("disabled","disabled");
 
-        /*$(".editButton").attr("disabled","disabled");
-        $(".addButton").attr("disabled","disabled");
-        $(".removeButton").attr("disabled","disabled");*/
         $(".editButton").addClass("disabled");
         $(".addButton").addClass("disabled");
         $(".removeButton").addClass("disabled");
+        $(".radioButton").addClass("disabled");
+
     },
     setEdit: function() {
         $('#select_table input:text[id!=createName]').removeAttr("disabled");
@@ -385,14 +381,10 @@ var commonFn = {
         $('.name').removeAttr("disabled").css("background-color", "#FFFFFF");
         $('.weight').removeAttr("disabled").css("background-color", "#FFFFFF");
         $('.standard').removeAttr("disabled").css("background-color", "#FFFFFF");
-        //重新赋值onclick以解决禁用easyui的按钮控件再启用时失效问题
-        $(".radioButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.showNextKPITree(this.id);return false;");
 
-       /* $(".editButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.editContent();return false;");
-        $(".addButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.addTableRow(this);return false;");
-        $(".removeButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.removeTableRow(this);return false;");*/
         $(".editButton").removeClass("disabled");
         $(".addButton").removeClass("disabled");
         $(".removeButton").removeClass("disabled");
+        $(".radioButton").removeClass("disabled");
     }
 };
