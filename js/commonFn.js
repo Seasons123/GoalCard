@@ -372,9 +372,12 @@ var commonFn = {
         $('.standard').attr("disabled", "disabled").css("background-color", "#f8f8f8");
         $(".radioButton").attr("disabled","disabled");
 
-        $(".editButton").attr("disabled","disabled");
+        /*$(".editButton").attr("disabled","disabled");
         $(".addButton").attr("disabled","disabled");
-        $(".removeButton").attr("disabled","disabled");
+        $(".removeButton").attr("disabled","disabled");*/
+        $(".editButton").addClass("disabled");
+        $(".addButton").addClass("disabled");
+        $(".removeButton").addClass("disabled");
     },
     setEdit: function() {
         $('#select_table input:text[id!=createName]').removeAttr("disabled");
@@ -385,8 +388,11 @@ var commonFn = {
         //重新赋值onclick以解决禁用easyui的按钮控件再启用时失效问题
         $(".radioButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.showNextKPITree(this.id);return false;");
 
-        $(".editButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.editContent();return false;");
+       /* $(".editButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.editContent();return false;");
         $(".addButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.addTableRow(this);return false;");
-        $(".removeButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.removeTableRow(this);return false;");
+        $(".removeButton").removeAttr("disabled").removeClass("l-btn-disabled").removeAttr("href").attr("onclick","commonFn.removeTableRow(this);return false;");*/
+        $(".editButton").removeClass("disabled");
+        $(".addButton").removeClass("disabled");
+        $(".removeButton").removeClass("disabled");
     }
 };
