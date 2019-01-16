@@ -2,60 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f3523b-ce39-4151-9710-5c9a0568c856" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" beforeDir="false" afterPath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" beforeDir="false" afterPath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/commonFn.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commonFn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/changeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/easyui-lang-zh_CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/passwordbox_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/passwordbox_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tagbox_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/jquery.easyui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_a_bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_plain_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/button_span_bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/combo_arrow.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/layout_button_left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/panel_title.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_leftarrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/tabs_rightarrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/validatebox_pointer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/default/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/edit_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/edit_remove.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/filesave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/pencil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/reload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/select.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/submit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/jqueryEasyUi/themes/icons/undo.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,8 +21,8 @@
       <file leaf-file-name="indicatorSelectAndFill.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="286">
+              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -84,8 +33,8 @@
       <file leaf-file-name="commonFn.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/commonFn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="383" column="8" selection-start-line="383" selection-start-column="8" selection-end-line="383" selection-end-column="8" />
+            <state relative-caret-position="251">
+              <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
                 <element signature="e#109#115#1" expanded="true" />
@@ -98,8 +47,8 @@
       <file leaf-file-name="indicatorSelectAndFill.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="293" column="110" lean-forward="true" selection-start-line="293" selection-start-column="110" selection-end-line="293" selection-end-column="110" />
+            <state relative-caret-position="273">
+              <caret line="285" column="108" lean-forward="true" selection-start-line="285" selection-start-column="108" selection-end-line="285" selection-end-column="108" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
                 <element signature="e#109#115#1" expanded="true" />
@@ -142,10 +91,10 @@
         <option value="$PROJECT_DIR$/goalWhole/1.html" />
         <option value="$PROJECT_DIR$/plugins/ip/css/theme/blue.css" />
         <option value="$PROJECT_DIR$/js/public.js" />
-        <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" />
         <option value="$PROJECT_DIR$/css/indicatorSelect.css" />
         <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" />
         <option value="$PROJECT_DIR$/js/commonFn.js" />
+        <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" />
       </list>
     </option>
   </component>
@@ -245,18 +194,18 @@
       <workItem from="1547448014263" duration="2291000" />
       <workItem from="1547454519136" duration="1771000" />
       <workItem from="1547515889049" duration="14287000" />
-      <workItem from="1547601935707" duration="9857000" />
+      <workItem from="1547601935707" duration="10379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28206000" />
+    <option name="totallyTimeSpent" value="28728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14880952" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14880952" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -395,10 +344,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="293" column="110" lean-forward="true" selection-start-line="293" selection-start-column="110" selection-end-line="293" selection-end-column="110" />
+        <state relative-caret-position="273">
+          <caret line="285" column="108" lean-forward="true" selection-start-line="285" selection-start-column="108" selection-end-line="285" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
             <element signature="e#109#115#1" expanded="true" />
@@ -408,20 +367,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/commonFn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="383" column="8" selection-start-line="383" selection-start-column="8" selection-end-line="383" selection-end-column="8" />
+        <state relative-caret-position="251">
+          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="e#109#115#1" expanded="true" />
