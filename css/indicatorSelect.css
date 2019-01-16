@@ -1,3 +1,6 @@
+body{
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Segoe UI', 'Microsoft Yahei', Tahoma, Arial, STHeiti, sans-serif;
+}
 #target_table td,th{
     height:33px;
     border:1px solid #ccc;
@@ -12,7 +15,6 @@
 }
 
 #check_table td{
-
     border:1px solid #ccc;
 }
 
@@ -20,12 +22,6 @@ td textarea{
     width:99%;
     border:none;
     overflow:auto;
-}
-#verifyMsg td{
-    border:1px solid #ccc;
-    border-collapse:collapse;
-    background:#D1EEEE;
-    color:red;
 }
 .bb select{
     width:100%;
@@ -46,7 +42,6 @@ td textarea{
 }
 .ff{
     border-bottom-style:none;
-    border-bottom-style:hidden;
     border-left-style:none;
     border-right-style:none;
 }
@@ -62,24 +57,42 @@ textarea{
 .aa{
     text-align: left;
 }
-
+#verifyMsg td{
+    border:1px solid #ccc;
+    border-collapse:collapse;
+    /*background:#D1EEEE;*/
+    background:#f8f8f8;
+    color:red;
+}
 .aa,.bb{
-    background:#D1EEEE;
+    /*background:#D1EEEE;*/
+    background:#f8f8f8;
     text-align: left;
 }
 .cc{
-    background:#D1EEEE;
+    /*background:#D1EEEE;*/
+    background:#f8f8f8;
     text-align:center;
 }
-.dd{ /* 绿底色 加粗 居中 */
-    background:#D1EEEE;
+.dd{
+    /*background:#D1EEEE;*/
+    background:#f8f8f8;
     font-weight:bold;
     text-align:center;
 }
 .ee{
     text-align: left;
-    background:#D1EEEE;
+    /*background:#D1EEEE;*/
+    background:#f8f8f8;
     padding-left: 4px;
+}
+.indicator{
+    color: #545454;
+}
+.tableHeader{
+    background: #ddefff;
+    color: #333;
+    text-align: center;
 }
 input.text{
     text-align:center;

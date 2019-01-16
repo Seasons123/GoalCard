@@ -161,16 +161,10 @@ var commonFn = {
         trHTML += '<td class="cc '+ id + 'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
         trHTML += '<td class="aa '+ id + 'Standard" colspan="5"><textarea id="row' + id + 'colStandard'+ commonFn.random(1,100000) +'" class="easyui-validatebox standard" required="true" onchange="" ></textarea></td>';//评分标准列
 
-        trHTML += '<td class="ee '+ id +'Operation" colspan="5">' +
-            '<a href="#" class="easyui-linkbutton l-btn l-btn-small editButton" iconcls="icon-edit" onclick="commonFn.editContent();return false;" group>' +
-            '  <span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">修改</span><span class="l-btn-icon icon-edit"></span></span>' +
-            '</a>&nbsp;' +
-            '<a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add addButton" onclick="commonFn.addTableRow(this);return false;" group>' +
-            '  <span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">增加</span><span class="l-btn-icon icon-add"></span></span>' +
-            '</a>&nbsp;' +
-            '<a href="#" class="easyui-linkbutton l-btn l-btn-small removeButton" iconcls="icon-remove" onclick="commonFn.removeTableRow(this);return false;" group>' +
-            '  <span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">删除</span><span class="l-btn-icon icon-remove"></span></span>' +
-            '</a>' +
+        trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
+            '<a class="iconmenu icon-edit editButton"  onclick="commonFn.editContent()" title="修改">' +
+            '<a class="iconmenu icon-add addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
+            '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除">' +
             '</td>';//最后一列操作列
         trHTML += '<td class="serial" colspan="1" style="display:none;"></td>';//序号列
         trHTML += '</tr>';
@@ -373,9 +367,9 @@ var commonFn = {
     setReadonly:function() {
         $('#select_table input:text[id!=createName]').attr("disabled", "disabled");
         $('#select_table textarea').attr("disabled", "disabled");
-        $('.name').attr("disabled", "disabled").css("background-color", "#D1EEEE");
-        $('.weight').attr("disabled", "disabled").css("background-color", "#D1EEEE");
-        $('.standard').attr("disabled", "disabled").css("background-color", "#D1EEEE");
+        $('.name').attr("disabled", "disabled").css("background-color", "#f8f8f8");
+        $('.weight').attr("disabled", "disabled").css("background-color", "#f8f8f8");
+        $('.standard').attr("disabled", "disabled").css("background-color", "#f8f8f8");
         $(".radioButton").attr("disabled","disabled");
 
         $(".editButton").attr("disabled","disabled");

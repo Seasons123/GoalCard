@@ -13,12 +13,12 @@ TablecommonFn = {
         //总共的列数为：指标级次数levelNum+5
         var html = '<tr>';
         for(var i=0; i < levelNum + 1; i++){
-            html += '<th id="colName'+ (i+1) +'" class="aa" width="" >' + kpiLevelName[i] + '</th>';
+            html += '<th id="colName'+ (i+1) +'" class="tableHeader" width="" >' + kpiLevelName[i] + '</th>';
         }
-        html += '<th id="colWeight" class="aa" width="100px" >分数</th>';
-        html += '<th id="colStander" class="aa" width="300px" colspan="5">评分标准</th>';
-        html += '<th id="colOperation" class="aa" width="100px" colspan="5">操作</th>';
-        html += '<th id="colOperation" class="aa" width="10px" colspan="1" style="display:none;">序号</th>';
+        html += '<th id="colWeight" class="tableHeader" width="100px" >分数</th>';
+        html += '<th id="colStander" class="tableHeader" width="300px" colspan="5">评分标准</th>';
+        html += '<th id="colOperation" class="tableHeader" width="100px" colspan="5">操作</th>';
+        html += '<th id="colOperation" class="tableHeader" width="10px" colspan="1" style="display:none;">序号</th>';
         html += '</tr>';
         $('#tableHeader').append(html);
     },
@@ -245,7 +245,7 @@ TablecommonFn = {
                     }
                 }
                 if (window[tdKey] == '' || window[tdKey] != kpiObject.id) {
-                    htmlTableBody += '<td class="cc" id="'+ kpiObject.id +'Name'+ j +'" title="'+ kpiObject.explain +'" rowspan="' + kpiObject.rows + '">' + kpiObject.name  + "（" +  kpiObject.weight+ "分）" + '</td>';
+                    htmlTableBody += '<td class="cc indicator" id="'+ kpiObject.id +'Name'+ j +'" title="'+ kpiObject.explain +'" rowspan="' + kpiObject.rows + '">' + kpiObject.name  + "（" +  kpiObject.weight+ "分）" + '</td>';
                     window[tdKey] = kpiObject.id;
                 }
             }
@@ -260,7 +260,7 @@ TablecommonFn = {
                 }
             }
             if (window[tdKey] == '' || window[tdKey] != kpiObjectFinal.id) {
-                htmlTableBody += '<td class="cc" id="'+ kpiObjectFinal.id +'Name'+ levelNum +'" title="'+ kpiObjectFinal.explain +'" rowspan="' + kpiObjectFinal.rows + '">' + kpiObjectFinal.name  + "（" +  kpiObjectFinal.weight+ "分）" + '</td>';//当前末级指标
+                htmlTableBody += '<td class="cc indicator" id="'+ kpiObjectFinal.id +'Name'+ levelNum +'" title="'+ kpiObjectFinal.explain +'" rowspan="' + kpiObjectFinal.rows + '">' + kpiObjectFinal.name  + "（" +  kpiObjectFinal.weight+ "分）" + '</td>';//当前末级指标
                 window[tdKey] = kpiObjectFinal.id;
             }
             //渲染当前末级指标列end
@@ -290,15 +290,7 @@ TablecommonFn = {
             }
             //渲染下级待选择指标内容end
 
-        /*<div title="" class="u-grid-content-td-div " style="text-align:left;">
-               <div class="fun-plan-operate fun-operate">
-                <a id="0" onclick="doEdit(this.id)" class="iconmenu icon-edit" title="修改"></a>
-                <a id="0" onclick="doDetail(this.id)" class="iconmenu icon-details" title="详情"></a>
-                <a id="0" onclick="doDelete(this.id)" class="iconmenu icon-delete" title="删除"></a>
-               </div>
-          </div>*/
-
-            htmlTableBody += '<td class="ee '+ kpiObjectFinal.id +'Operation" colspan="5">' +
+            htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Operation" colspan="5">' +
                 '<a class="iconmenu icon-edit editButton"  onclick="commonFn.editContent()" title="修改">' +
                 '<a class="iconmenu icon-add addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
                 '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除">' +
