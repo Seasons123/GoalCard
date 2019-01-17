@@ -75,30 +75,55 @@ var commonFn = {
         var idNameTextArea = $("#" + value).prev().attr("id");
         var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
         var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
+        var queryParams={
+            parentId: id ,
+            nameTextAreaId: idNameTextArea,
+            weightTextAreaId: idWeightTextArea,
+            standardTextAreaId: idStandardTextArea
+        };//值传递
         commonFn.nextKPICollection(id);
         console.log(htmlDialogGlobal);
-        BootstrapDialog.show({ //用js创建dialog
+        var dlg = BootstrapDialog.show({ //用js创建dialog
             title: '末级指标选择',
             message: function() {
                 var $content = $( htmlDialogGlobal );
                 return $content;
             },
-            queryParams: {
-                parentId: id ,
-                nameTextAreaId: idNameTextArea,
-                weightTextAreaId: idWeightTextArea,
-                standardTextAreaId: idStandardTextArea},//值传递
             buttons: [{
                 label: '保存',
-                action:commonFn.dialogSave
+                action:function(){
+                    var id = queryParams.parentId; //末级的父级指标id值
+                    var idFinalKPIOld = queryParams.nameTextAreaId; //选择前末级的id值，名字单元格id
+                    var weightTextAreaIdOld = queryParams.weightTextAreaId; //选择前末级权重值单元格dom元素的id
+                    var standardTextAreaIdOld = queryParams.standardTextAreaId; //选择前末级评分标准单元格dom元素的id
+                    var idFinalKPI = $("input[name='"+ id +"']:checked").attr('id'); //当前末级指标id值
+                    if(idFinalKPI){
+                        for(var i=0; i<kpiObjectNextGlobal.length; i++) {
+                            if (kpiObjectNextGlobal[i].id == idFinalKPI) {
+                                var idFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
+                                var weightTextAreaIdNew =  "row" + idFinalKPI + "colWeight" + commonFn.random(1,100000);
+                                var standardTextAreaIdNew =  "row" + idFinalKPI + "colStandard" + commonFn.random(1,100000);
+                                $('#' + idFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("id", idFinalKPINew);
+                                $('#' + weightTextAreaIdOld).attr("id", weightTextAreaIdNew);
+                                $('#' + standardTextAreaIdOld).attr("id", standardTextAreaIdNew);
+
+                                queryParams.nameTextAreaId = idFinalKPINew; //更新
+                                queryParams.weightTextAreaId = weightTextAreaIdNew; //更新
+                                queryParams.standardTextAreaId = standardTextAreaIdNew; //更新
+                                dlg.close();
+                            }
+                        }
+                    }else{
+                        $.messager.alert('信息', '请选择末级指标', 'info');
+                    }
+                },
             }, {
                 label: '关闭',
-                action:commonFn.dialogClose
+                action:function(){
+                    dlg.close();
+                }
             }]
         });
-
-
-
     },
     changeNextKPISelect: function(id,value){
         $("input[name='"+ id +"']").each(function(index,domEle){
@@ -108,36 +133,6 @@ var commonFn = {
                 $("#"+domEle.id).attr("checked",false);
             }
         });
-    },
-    dialogSave: function(){
-        var obj = $('#dialogContent').dialog('options');
-        var id = obj["queryParams"].parentId; //末级的父级指标id值
-        var idFinalKPIOld = obj["queryParams"].nameTextAreaId; //选择前末级的id值，名字单元格id
-        var weightTextAreaIdOld = obj["queryParams"].weightTextAreaId; //选择前末级权重值单元格dom元素的id
-        var standardTextAreaIdOld = obj["queryParams"].standardTextAreaId; //选择前末级评分标准单元格dom元素的id
-        var idFinalKPI = $("input[name='"+ id +"']:checked").attr('id'); //当前末级指标id值
-        if(idFinalKPI){
-            for(var i=0; i<kpiObjectNextGlobal.length; i++) {
-                if (kpiObjectNextGlobal[i].id == idFinalKPI) {
-                    var idFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
-                    var weightTextAreaIdNew =  "row" + idFinalKPI + "colWeight" + commonFn.random(1,100000);
-                    var standardTextAreaIdNew =  "row" + idFinalKPI + "colStandard" + commonFn.random(1,100000);
-                    $('#' + idFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("id", idFinalKPINew);
-                    $('#' + weightTextAreaIdOld).attr("id", weightTextAreaIdNew);
-                    $('#' + standardTextAreaIdOld).attr("id", standardTextAreaIdNew);
-
-                    obj["queryParams"].nameTextAreaId = idFinalKPINew; //更新
-                    obj["queryParams"].weightTextAreaId = weightTextAreaIdNew; //更新
-                    obj["queryParams"].standardTextAreaId = standardTextAreaIdNew; //更新
-                }
-             }
-        }else{
-            $.messager.alert('信息', '请选择末级指标', 'info');
-        }
-
-    },
-    dialogClose: function(){
-        $('#dialogContent').dialog('close');
     },
     addTableRow: function(that){
         var id = that.parentNode.className.split(" ")[1].split("Operation")[0];//当前末级指标的父级id
