@@ -1,6 +1,9 @@
 body{
     font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Segoe UI', 'Microsoft Yahei', Tahoma, Arial, STHeiti, sans-serif;
 }
+#indicatorSelectForm{
+    font-size: 12px;
+}
 #target_table td,th{
     height:33px;
     border:1px solid #ccc;

@@ -1,3 +1,4 @@
+var htmlDialogGlobal = "";
 /* 公共函数类  class commonFn */
 var commonFn = {
     /*取获Json对象的长度*/
@@ -35,32 +36,7 @@ var commonFn = {
             commonFn.setReadonly();
         }
     },
-    /*显示下一级待选择末级指标树*/
-    showNextKPITree : function(value){
-        var id = value.split("num")[0];
-        var idNameTextArea = $("#" + value).prev().attr("id");
-        var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
-        var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
-        $('#dialogContent').dialog({ //用js创建dialog
-            title: '末级指标选择',
-            width: 350,
-            height: 300,
-            closed: true,
-            resizable:true,
-            modal: true,
-            queryParams: {
-                parentId: id ,
-                nameTextAreaId: idNameTextArea,
-                weightTextAreaId: idWeightTextArea,
-                standardTextAreaId: idStandardTextArea},//值传递
-            buttons:[{
-                text:'保存',
-                handler:commonFn.dialogSave
-            },{
-                text:'关闭',
-                handler:commonFn.dialogClose
-            }]
-        });
+    nextKPICollection: function(id){  //htmlDialog为全局变量
         var data = {  //当前kpi的id，需要向后台发送的唯一请求参数
             "parent.id":id
         };
@@ -74,27 +50,13 @@ var commonFn = {
                 withCredentials: true
             },
             crossDomain: true,
+            async: false,
             success: function (map) {
                 if(map.message){
                     $.messager.alert('错误', map.message, 'error');
                 }else{
                     $('#dialogContent').dialog('open').html("");
                     var htmlDialog = "";
-                    /*//1.使用本地json数据start
-                    var len = map.length;
-                    for(var i=0; i<len; i++){
-                        if(id == map[i].id){
-                            kpiObjectNextGlobal = map[i].next_kpi_list;
-                            for(var m=0; m < kpiObjectNextGlobal.length; m++){//末级指标评分标准
-                                htmlDialog += '<p style="width:300px;">' +
-                                    '<label>' +  kpiObjectNextGlobal[m].kpiName + '</label>' +
-                                    '<input type="radio" class="nextKPISelect" id="'+ kpiObjectNextGlobal[m].id + '" name="'+ id +'" value="' + m + '" onclick="commonFn.changeNextKPISelect(this.name,this.value)" />' +
-                                    '</p>';
-                            }
-                        }
-                    }
-                    //1.使用本地json数据end*/
-                    //2.使用本地服务器数据start
                     kpiObjectNextGlobal = map;
                     for(var m=0; m < kpiObjectNextGlobal.length; m++){//末级指标评分标准
                         htmlDialog += '<p style="width:300px;">' +
@@ -102,11 +64,41 @@ var commonFn = {
                             '<input type="radio" class="nextKPISelect" id="'+ kpiObjectNextGlobal[m].id + '" name="'+ id +'" value="' + m + '" onclick="commonFn.changeNextKPISelect(this.name,this.value)" />' +
                             '</p>';
                     }
-                    //2.使用本地服务器数据end
-                    $('#dialogContent').append(htmlDialog);
+                    htmlDialogGlobal = htmlDialog;
                 }
             }
         });
+    },
+    /*显示下一级待选择末级指标树*/
+    showNextKPITree : function(value){
+        var id = value.split("num")[0];
+        var idNameTextArea = $("#" + value).prev().attr("id");
+        var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
+        var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
+        commonFn.nextKPICollection(id);
+        console.log(htmlDialogGlobal);
+        BootstrapDialog.show({ //用js创建dialog
+            title: '末级指标选择',
+            message: function() {
+                var $content = $( htmlDialogGlobal );
+                return $content;
+            },
+            queryParams: {
+                parentId: id ,
+                nameTextAreaId: idNameTextArea,
+                weightTextAreaId: idWeightTextArea,
+                standardTextAreaId: idStandardTextArea},//值传递
+            buttons: [{
+                label: '保存',
+                action:commonFn.dialogSave
+            }, {
+                label: '关闭',
+                action:commonFn.dialogClose
+            }]
+        });
+
+
+
     },
     changeNextKPISelect: function(id,value){
         $("input[name='"+ id +"']").each(function(index,domEle){
