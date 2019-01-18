@@ -53,7 +53,7 @@ var commonFn = {
             async: false,
             success: function (map) {
                 if(map.message){
-                    $.messager.alert('错误', map.message, 'error');
+                    ip.ipInfoJump(map.message,"error");
                 }else{
                     $('#dialogContent').dialog('open').html("");
                     var htmlDialog = "";
@@ -115,7 +115,6 @@ var commonFn = {
                             }
                         }
                     }else{
-                        //$.messager.alert('信息', '请选择末级指标', 'info');
                         ip.ipInfoJump("请选择数据!","info");
                     }
                 },
@@ -309,11 +308,11 @@ var commonFn = {
             async: false,
             success: function (map) {
                 if(map.message){
-                    $.messager.alert('警告', map.message, 'warning');
+                    ip.ipInfoJump(map.message,"error");
                 }else{
                     commonFn.getSaveTaskKpiDataArray();
                     commonFn.setReadonly();
-                    $.messager.alert('信息', '提交成功', 'info');
+                    ip.ipInfoJump("提交成功","info");
                 }
             }
         });
@@ -342,7 +341,7 @@ var commonFn = {
             async: false,
             success: function (map) {
                 if(map.message){
-                    $.messager.alert('错误', map.message, 'error');
+                    ip.ipInfoJump(map.message,"error");
                 }else{
                     saveTaskKpiDataArrayResponse = map;
                     //后台传来的orderNum只能保证大小顺序，不能保证连续和从1排
