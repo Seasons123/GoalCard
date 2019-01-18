@@ -1,0 +1,36 @@
+.modal-body {
+     padding: 10px 20px 0 20px;
+}
+.modal-dialog {
+        right: auto;
+        left: 80%;
+        width: 260px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+.bootstrap-dialog .bootstrap-dialog-title {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+}
+ label {
+     display: inline-block;
+     margin-bottom: 5px;
+     font-weight: normal;
+ }
+ .bootstrap-dialog .bootstrap-dialog-message {
+     font-size: 12px;
+ }
+ .modal-header .close {
+     font-size: 20px;
+     font-weight: normal;
+      margin-top: 0;
+ }
+ .modal-footer .btn {
+     line-height: 12px;
+     font-size: 12px;
+ }
+.bootstrap-dialog.type-primary .modal-header {
+    background-color: #108EE9;
+}

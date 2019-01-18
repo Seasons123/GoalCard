@@ -60,7 +60,7 @@ var commonFn = {
                     kpiObjectNextGlobal = map;
                     for(var m=0; m < kpiObjectNextGlobal.length; m++){//末级指标评分标准
                         htmlDialog += '<p style="width:300px;">' +
-                            '<label>' +  kpiObjectNextGlobal[m].kpiName + '</label>' +
+                            '<label>' +  kpiObjectNextGlobal[m].kpiName + '</label> &nbsp;&nbsp;' +
                             '<input type="radio" class="nextKPISelect" id="'+ kpiObjectNextGlobal[m].id + '" name="'+ id +'" value="' + m + '" onclick="commonFn.changeNextKPISelect(this.name,this.value)" />' +
                             '</p>';
                     }
@@ -89,6 +89,7 @@ var commonFn = {
                 var $content = $( htmlDialogGlobal );
                 return $content;
             },
+            size : BootstrapDialog.SIZE_SMALL,//size为小，默认的对话框比较宽
             buttons: [{
                 label: '保存',
                 action:function(){
