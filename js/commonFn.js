@@ -150,7 +150,7 @@ var commonFn = {
 
         trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
             '<a class="iconmenu icon-edit editButton"  onclick="commonFn.editContent()" title="修改">' +
-            '<a class="iconmenu icon-add addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
+            '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
             '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除">' +
             '</td>';//最后一列操作列
         trHTML += '<td class="serial" colspan="1" style="display:none;"></td>';//序号列
