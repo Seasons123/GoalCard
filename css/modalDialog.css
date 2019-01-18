@@ -1,3 +1,6 @@
+/*需要覆盖原生框架里的样式是因为，dialog的生成是利用bootstrap的开源插件bootstrap-dialog.js，
+这个插件里生成的样式与其它的弹窗样式不一致
+*/
 .modal-body {
      padding: 10px 20px 0 20px;
 }

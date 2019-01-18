@@ -309,7 +309,7 @@ ip.ipInfoJump = function(msg, flag) {
 		flag_icon = "info-sign";
 	}
 	if(flag != "info"){
-		var bodyHtml = '<span><img src="/df/trd/ip/css/theme/images/' + flag_icon + '-Info.png" style="margin-right: 10px; margin-left:5px;"></span><span class="info-notice-message">'+msg+'</span>';
+		var bodyHtml = '<span><img src="/fpe-web-8.1/trd/ip/css/theme/images/' + flag_icon + '-Info.png" style="margin-right: 10px; margin-left:5px;"></span><span class="info-notice-message">'+msg+'</span>';
 	}else{
 		var bodyHtml = '<span><i class="glyphicon glyphicon-' + flag_icon + ' ip-pop-' + flag + '"></i><span class="info-notice-message">'+msg+'</span>';
 
