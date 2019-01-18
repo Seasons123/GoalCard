@@ -418,9 +418,7 @@ label.text-right {
 }
 .u-gird-centent-sum-div{display: none;}
 .u-grid-noScroll-left:before {
-    content: "\7edf\8ba1";
-    text-decoration:underline;
-    cursor:pointer;
+    content: "\5c0f\8ba1";
     color: #333;
     font-family: 微软雅黑;
     font-family:"Microsoft YaHei";
@@ -527,7 +525,7 @@ span.circle-num{
 	position: absolute;
     height: 50px;
     line-height: 50px;
-    font-size: 24px;
+    font-size: 30px;
     border: 1px solid #bababa;
     top: -50px;
     left: 0;
@@ -609,16 +607,8 @@ span.circle-num{
     -webkit-animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08);
     animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08);
 }
-/*辅助录入树 li 样式*/
-.input-quick-ele-list ul li{
-	cursor: pointer;
-	padding: 2px;
-}
-.input-quick-ele-list ul li:hover,
-.input-quick-ele-list-selected{
-	color: #fff;
-	background: #108EE9;
-}
+
+
 /*监控*/
 #monitorModalIllegal table{ border-collapse: collapse;}
 #monitorModalIllegal table,table tr th, table tr td { border:1px solid #ccc; }

@@ -3,9 +3,8 @@
 }
 .modal-dialog {
         right: auto;
-        left: 80%;
         width: 260px;
-        padding-top: 30px;
+        padding-top: 100px;
         padding-bottom: 30px;
     }
 
@@ -33,4 +32,13 @@
  }
 .bootstrap-dialog.type-primary .modal-header {
     background-color: #108EE9;
+}
+.modal-header {
+    padding: 7px 15px;
+    border-radius: 6px 6px 0px 0px;
+    background: #1871C1;
+    color: #fff;
+}
+.modal-footer {
+    padding: 5px 15px;
 }

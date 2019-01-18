@@ -115,7 +115,8 @@ var commonFn = {
                             }
                         }
                     }else{
-                        $.messager.alert('信息', '请选择末级指标', 'info');
+                        //$.messager.alert('信息', '请选择末级指标', 'info');
+                        ip.ipInfoJump("请选择数据!","info");
                     }
                 },
             }, {
