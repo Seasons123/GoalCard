@@ -6,7 +6,6 @@
 }
 .modal-dialog {
         right: auto;
-        width: 260px;
         padding-top: 100px;
         padding-bottom: 30px;
     }
@@ -44,4 +43,21 @@
 }
 .modal-footer {
     padding: 5px 15px;
+}
+
+.form-control{
+    width: 30px;
+}
+.dialogLabel{
+    padding: 0;
+    margin-right: 5px;
+    font-weight:normal;
+}
+.form-control {
+    display: inline;
+    width: 160px;
+}
+.btn {
+    padding: 6px 10px 5px 10px;
+    margin-left: 10px;
 }

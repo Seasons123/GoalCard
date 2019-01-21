@@ -56,7 +56,9 @@ var commonFn = {
                     ip.ipInfoJump(map.message,"error");
                 }else{
                     $('#dialogContent').dialog('open').html("");
-                    var htmlDialog = "";
+                    var htmlDialog = '<label class="dialogLabel">快速定位</label>';
+                    htmlDialog += '<input type="text" class="form-control" id="user-write" name="inp-radio-data-tree" onkeyup="ip.quickQuery(this.name)" onkeydown="if(event.keyCode == 13){ip.keyTreeNext(this.name)}">' ;
+                    htmlDialog += '<button id="btn-radio-data-tree" class="btn btn-primary top-button" type="button" name="btnFind" onclick="ip.search(this.id);">查找</button>';
                     kpiObjectNextGlobal = map;
                     for(var m=0; m < kpiObjectNextGlobal.length; m++){//末级指标评分标准
                         htmlDialog += '<p style="width:300px;">' +
@@ -89,7 +91,7 @@ var commonFn = {
                 var $content = $( htmlDialogGlobal );
                 return $content;
             },
-            size : BootstrapDialog.SIZE_SMALL,//size为小，默认的对话框比较宽
+            size : BootstrapDialog.LARGE,//size为小，默认的对话框比较宽
             buttons: [{
                 label: '保存',
                 action:function(){
