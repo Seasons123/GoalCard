@@ -5,9 +5,11 @@
      padding: 10px 20px 0 20px;
 }
 .modal-dialog {
-        right: auto;
-        padding-top: 100px;
-        padding-bottom: 30px;
+    right: auto;
+    width: 700px;
+    height: 800px;
+    padding-top: 100px;
+    padding-bottom: 30px;
     }
 
 .bootstrap-dialog .bootstrap-dialog-title {
@@ -60,4 +62,21 @@
 .btn {
     padding: 6px 10px 5px 10px;
     margin-left: 10px;
+}
+/*
+.u-grid tr[role="row"]:nth-child(even) {
+    background-color: rgba(255, 152, 0, 0.38) !important;
+}*/
+input.form-control, select.form-control {
+    border-radius: 4px;
+    padding: 2px 2px;
+    padding-left: 7px;
+    box-shade: 0px;
+    -webkit-box-shadow: none;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #bababa;
+}
+#grid_content{
+    height: 200px;
 }

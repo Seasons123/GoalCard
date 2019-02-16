@@ -1,5 +1,5 @@
 //走网关用端口8081，直接走后台服务用端口8000
-var sever = "2";
+var sever = "1";
 var formUrl = {} ;
 switch (sever){
     case "0":
