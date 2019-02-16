@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="99f3523b-ce39-4151-9710-5c9a0568c856" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/modalDialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modalDialog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" beforeDir="false" afterPath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" beforeDir="false" afterPath="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/commonFn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/public.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/public.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,17 +24,14 @@
       <file leaf-file-name="indicatorSelectAndFill.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="public.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/public.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="198">
+              <caret line="36" column="73" lean-forward="true" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,8 +39,23 @@
       <file leaf-file-name="indicatorSelectAndFill.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7018">
-              <caret line="319" column="20" selection-start-line="319" selection-start-column="20" selection-end-line="319" selection-end-column="20" />
+            <state relative-caret-position="352">
+              <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+              <folding>
+                <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+                <element signature="e#109#115#1" expanded="true" />
+                <element signature="e#109#115#1" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/public.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="65" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -83,6 +95,7 @@
       <find>width</find>
       <find>kpiObjectNextGlobal</find>
       <find>pageChangeFun</find>
+      <find>addTableRow</find>
     </findStrings>
     <replaceStrings>
       <replace>modalContent</replace>
@@ -107,12 +120,13 @@
         <option value="$PROJECT_DIR$/plugins/ip/css/ip.css" />
         <option value="$PROJECT_DIR$/plugins/ip/js/ip.js" />
         <option value="$PROJECT_DIR$/css/modalDialog.css" />
-        <option value="$PROJECT_DIR$/js/commonFn.js" />
         <option value="$PROJECT_DIR$/1/1.js" />
         <option value="$PROJECT_DIR$/1/1.html" />
         <option value="$PROJECT_DIR$/goalWhole/showNextKPIInfo.js" />
-        <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" />
         <option value="$PROJECT_DIR$/js/public.js" />
+        <option value="$PROJECT_DIR$/js/commonFn.js" />
+        <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" />
         <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" />
       </list>
     </option>
@@ -126,8 +140,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-11" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -164,7 +178,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DTC_demo3_v2" />
+    <property name="last_opened_file_path" value="D:/pe_work_git/fpe-web-8.1/src/main/resources/static/fpe-web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
@@ -223,15 +237,15 @@
       <workItem from="1550023005701" duration="596000" />
       <workItem from="1550038449654" duration="1514000" />
       <workItem from="1550193706659" duration="598000" />
-      <workItem from="1550281407037" duration="1734000" />
+      <workItem from="1550281407037" duration="8354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115713000" />
+    <option name="totallyTimeSpent" value="122333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-11" y="0" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18080357" />
@@ -280,20 +294,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/commonFn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="100" column="60" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/commonFn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6534">
@@ -565,32 +565,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1/1.js" />
     <entry file="file://$PROJECT_DIR$/1/1.html" />
-    <entry file="file://$PROJECT_DIR$/js/commonFn.js">
+    <entry file="file://$PROJECT_DIR$/goalWhole/showNextKPIInfo.js" />
+    <entry file="file://$PROJECT_DIR$/js/showNextKPIInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="97" column="26" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="46" />
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goalWhole/showNextKPIInfo.js" />
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="47" column="205" selection-start-line="47" selection-start-column="205" selection-end-line="47" selection-end-column="205" />
+          <folding>
+            <element signature="e#109#115#1" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/commonFn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2617">
+          <caret line="176" column="84" lean-forward="true" selection-start-line="176" selection-start-column="84" selection-end-line="176" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#109#115#1" expanded="true" />
+            <element signature="e#346#352#1" expanded="true" />
+            <element signature="e#396#402#1" expanded="true" />
+            <element signature="e#307#313#1" expanded="true" />
+            <element signature="e#584#590#1" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7018">
-          <caret line="319" column="20" selection-start-line="319" selection-start-column="20" selection-end-line="319" selection-end-column="20" />
+        <state relative-caret-position="352">
+          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+            <element signature="e#109#115#1" expanded="true" />
+            <element signature="e#109#115#1" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="462">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="198">
+          <caret line="36" column="73" lean-forward="true" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

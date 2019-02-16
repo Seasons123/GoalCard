@@ -14,10 +14,9 @@ TablecommonFn = {
         //总共的列数为：指标级次数levelNum+5
         var html = '<tr>';
         for(var i=0; i < levelNum + 1; i++){
-            html += '<th id="colName'+ (i+1) +'" class="tableHeader" width="" >' + kpiLevelName[i] + '</th>';
+            html += '<th id="colName'+ (i+1) +'" class="tableHeader" width="205px" >' + kpiLevelName[i] + '</th>';
         }
-        html += '<th id="colWeight" class="tableHeader" width="100px" >分数</th>';
-        html += '<th id="colStander" class="tableHeader" width="300px" colspan="5">评分标准</th>';
+        html += '<th id="colWeight" class="tableHeader" width="100px" >指标值</th>';
         html += '<th id="colOperation" class="tableHeader" width="100px" colspan="5">操作</th>';
         html += '<th id="colOperation" class="tableHeader" width="10px" colspan="1" style="display:none;">序号</th>';
         html += '</tr>';
@@ -46,8 +45,8 @@ TablecommonFn = {
         var trNum = evalContent.length + saveTaskKpiDataArrayResponse.length - commonFn.getJsonLength(saveTaskKpiDataArrayResponseParent); //计算总行数
         levelNum = parseInt(evalContent[0].kpiLevel); //一共有几级指标，不包含要设置的下级指标
         TablecommonFn.initTableHeader(levelNum);
-        $("#colName" + levelNum ).css("width","200px");
-        $("#colName" + (levelNum + 1) ).css("width","200px");
+        //$("#colName" + levelNum ).css("width","300px");
+        //$("#colName" + (levelNum + 1) ).css("width","300px");
         tdNum = levelNum ;
         var indicatorArray = [];
         var indicatorObject = {};
@@ -279,15 +278,12 @@ TablecommonFn = {
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea id="row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" >'+ kpiObjectFinalNext.name +'</textarea>&nbsp;' +  //名称列
                     '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//权重列
-                htmlTableBody += '<td class="aa '+ kpiObjectFinal.id +'Standard" colspan="5"><textarea id="row' + kpiObjectFinalNext.id + 'colStandard'+ commonFn.random(1,100000) +'" class="easyui-validatebox standard" required="true" onchange="" >'+ kpiObjectFinalNext.standard +'</textarea></td>';//评分标准列
-
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
             }else{
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea id="row' + kpiObjectFinal.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" ></textarea>&nbsp;' +  //名称列
                     '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
-                htmlTableBody += '<td class="aa '+ kpiObjectFinal.id +'Standard" colspan="5"><textarea id="row' + kpiObjectFinal.id + 'colStandard'+ commonFn.random(1,100000) +'" class="easyui-validatebox standard" required="true" onchange="" ></textarea></td>';//评分标准列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//指标值列
             }
             //渲染下级待选择指标内容end
 

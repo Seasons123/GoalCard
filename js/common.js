@@ -46,8 +46,6 @@ var commonFn = {
             '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="commonFn.showNextKPITree(this.id)" title="查看"></a>' +
             '</td>';
         trHTML += '<td class="cc '+ id + 'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
-        trHTML += '<td class="aa '+ id + 'Standard" colspan="5"><textarea id="row' + id + 'colStandard'+ commonFn.random(1,100000) +'" class="easyui-validatebox standard" required="true" onchange="" ></textarea></td>';//评分标准列
-
         trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
             '<a class="iconmenu icon-edit editButton"  onclick="commonFn.editContent()" title="修改">' +
             '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
