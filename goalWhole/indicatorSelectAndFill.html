@@ -49,43 +49,83 @@
             </div>
             <hr class="title-hr">
             <div class="content">
-                <div class="col-sm-12">
-                    <label class="col-sm-2 text-right pr5 require">父级</label>
+                <!--第一行-->
+                <div class="col-sm-4" style="overflow: auto;">
+                    <label class="col-sm-3 text-left pr5 require">项目名称：</label>
+                    <label id="projectId" class="blueColor col-sm-8" style="display: block;height: 30px;">重大科技成果转化和产业化</label>
+                </div>
+                <div class="col-sm-4" >
+                    <label class="col-sm-3 text-left pr5 require">主管部门：</label>
+                    <label id="departmentId"  class="blueColor" style="display: block;height: 30px;"> 006 北京市科学技术委员会 </label>
+                </div>
+                <div class="col-sm-4" >
+                    <label class="col-sm-3 text-left pr5 require">实施单位：</label>
+                    <label id="implementId"  class="blueColor" style="display: block;height: 30px;"> 北京市科学技术委员会 </label>
+                </div>
+                <!--第二行-->
+                <div class="col-sm-6">
+                    <label class="col-sm-2 text-left pr5 require">项目属性<span class="redColor">*</span>：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <input id="PARENT_ID" type="text" style="border-color: #ccc;" class="form-control " name="parentId" disabled="disabled">
-                        <input type="text" id="parentId-h" class="hide">
+                        <select id="attribute" class="form-control" name="attribute" style="border-color: #ccc;">请选择
+                            <option value="0">请选择</option>
+                            <option value="1">一次性</option>
+                            <option value="2">延续性</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <label class="col-sm-4 text-right pr5 require">编码<span class="redColor">*</span></label>
+                    <label class="col-sm-4 text-right pr5 require">项目期<span class="redColor">*</span>：</label>
+                    <div class="input-group col-sm-7 modal-input-group">
+                        <input id="projectPeriod" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName" placeholder="请输入...">
+                    </div>
+                    <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">年</label>
+                </div>
+                <!--第三行-->
+                <div class="col-sm-6">
+                    <label class="col-sm-3 text-left pr5 require">中期资金总额：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <input id="CHR_CODE1" type="text" style="border-color: #ccc; width: 50%; margin-right: 1%;" class="form-control " name="CHR_CODE1" disabled="disabled">
-                        <input id="CHR_CODE2" type="number" style="border-color: #ccc; width: 49%" class="form-control " name="CHR_CODE2" placeholder="编码为两位整数"> <span id="CHR_CODE2-ERROR" class="errorSpan"></span>
+                        <label id="totalMoney"  class="blueColor"> 0 </label>
+                        <span >万元</span>
+                        <span class="grayColor">=财政拨款（中期）+其他资金（中期）</span>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <label class="col-sm-4 text-right pr5 require">名称<span class="redColor">*</span></label>
+                    <label class="col-sm-4 text-right pr5 require">年度资金总额：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <input id="kpiName" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
+                        <label id="yearTotalMoney" class="blueColor"> 387905 </label>
+                        <span >万元</span>
+                        <span class="grayColor">=财政拨款（年度）+其他资金（年度）</span>
                     </div>
                 </div>
+                <!--第四行-->
                 <div class="col-sm-6">
-                    <label class="col-sm-4 text-right pr5 require">启用</label>
-                    <div class="input-group col-sm-8 modal-input-group">
-                        <input id="isEnable" type="checkbox" style="border-color: #ccc;" name="isEnable">
+                    <label class="col-sm-3 text-left pr5 require">其中：财政拨款：</label>
+                    <div class="input-group col-sm-7 modal-input-group">
+                        <input id="financeGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
                     </div>
+                    <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
                 </div>
                 <div class="col-sm-6">
-                    <label class="col-sm-4 text-right pr5 require">生效</label>
+                    <label class="col-sm-4 text-right pr5 require">其中：财政拨款<span class="redColor">*</span>：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <input id="isEnd" type="checkbox" style="border-color: #ccc;" name="isEnd" disabled="disabled" checked="true">
+                        <label id="yearFinanceGrant" class="blueColor"> 387905 </label>
+                        <span >万元</span>
                     </div>
                 </div>
+                <!--第五行-->
                 <div class="col-sm-6">
-                    <label class="col-sm-4 text-right pr5 require">是否明细</label>
-                    <div class="input-group col-sm-8 modal-input-group">
-                        <input id="isDetail" type="checkbox" style="border-color: #ccc;" name="isDetail">
+                    <label class="col-sm-3 text-left pr5 require">其它资金<span class="redColor">*</span>：</label>
+                    <div class="input-group col-sm-7 modal-input-group">
+                        <input id="otherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
                     </div>
+                    <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-sm-4 text-right pr5 require">其它资金<span class="redColor">*</span>：</label>
+                    <div class="input-group col-sm-7 modal-input-group">
+                        <input id="yearOtherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
+                    </div>
+                    <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
                 </div>
             </div>
             <div class="title">

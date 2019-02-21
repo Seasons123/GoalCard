@@ -194,6 +194,15 @@ a.disabled {
 .redColor {
     color:red;
 }
+.grayColor {
+    color:#ccc;
+}
+.blueColor{
+    color:#1184B7;
+    margin-right:10px;
+    background:transparent;
+    border:none;
+}
 .addFooter{
     min-height: 50px;
     padding: 10px;
