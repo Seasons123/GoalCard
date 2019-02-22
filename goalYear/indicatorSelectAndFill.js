@@ -1,4 +1,4 @@
-/*北京市2019年3月份版本：指标级次数levelNum确定为3*/
+/*北京市2019年3月份版本：指标级次数levelNum确定为2*/
 var tdNum = 0;
 var kpiTableInfoGlobal=[];
 var evalContent=[];
@@ -14,15 +14,25 @@ TablecommonFn = {
     initTableHeader: function () {
         //总共的列数为：指标级次数levelNum+5
         var html = '<tr>';
-        html +=  '<th></th>';
+        html +=  '<th colspan="'+ (levelNum + 3 )+'" class="goalWhole">中期目标</th>';
+        html +=  '<th colspan="'+ (levelNum + 3 )+'" class="goalYear">年度目标</th>';
+        html += '<th id="colOperation" class="goalYear" width="100px" colspan="5" rowspan="2">操作</th>';
+        html += '<th id="colOperation" class="goalYear" width="10px" colspan="1" style="display:none;">序号</th>';
         html +=  '</tr>';
-        html +=  '</tr>';
-        for(var i=0; i < levelNum + 1; i++){
-            html += '<th id="colName'+ (i+1) +'" class="tableHeader" width="205px" >' + kpiLevelName[i] + '</th>';
+        html +=  '<tr>';
+        for(var i=0; i < levelNum ; i++){
+            html += '<th id="colName'+ (i+1) +'" class="goalWhole" width="110px" >' + kpiLevelName[i] + '</th>';
         }
-        html += '<th id="colWeight" class="tableHeader" width="100px" >指标值</th>';
-        html += '<th id="colOperation" class="tableHeader" width="100px" colspan="5">操作</th>';
-        html += '<th id="colOperation" class="tableHeader" width="10px" colspan="1" style="display:none;">序号</th>';
+        html += '<th id="colName'+ (levelNum+1) +'" class="goalWhole" width="110px" >' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
+        html += '<th id="colWeight" class="goalWhole" width="100px" >指标值<span class="redColor">*</span></th>';
+        html += '<th id="colWeight" class="goalWhole" width="100px" >单位</th>';
+        for(var i=1; i < levelNum; i++){
+            html += '<th id="colName'+ (i+1) +'" class="goalYear" width="110px" >' + kpiLevelName[i] + '</th>';
+        }
+        html += '<th id="colName'+ (levelNum+1) +'" class="goalYear" width="110px" >' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
+        html += '<th id="colWeight" class="goalYear" width="100px" >指标值<span class="redColor">*</span></th>';
+        html += '<th id="colWeight" class="goalYear" width="100px" >单位</th>';
+
         html += '</tr>';
         $('#tableHeader').append(html);
     },
@@ -36,7 +46,7 @@ TablecommonFn = {
         }
         console.log(evalContent);
         //表格左侧json数据转换start
-        var data = [];
+        var  targetListData = [];
         //计算saveTaskKpiDataArrayResponse中它们的直接父级共几个
         var saveTaskKpiDataArrayResponseParent = {};
         for(var i=0; i< saveTaskKpiDataArrayResponse.length; i++){
@@ -51,12 +61,12 @@ TablecommonFn = {
         TablecommonFn.initTableHeader(levelNum);
         //$("#colName" + levelNum ).css("width","300px");
         //$("#colName" + (levelNum + 1) ).css("width","300px");
-        tdNum = levelNum ;
         var indicatorArray = [];
         var indicatorObject = {};
 
-        //声明全局变量，生成计算每一列已经生成多少行，用于向data中塞值时使用
-        for(var i=1;i<=trNum ;i++) {
+        //声明全局变量，生成计算每一列已经生成多少行，用于向targetListData中塞值时使用
+        tdNum = 10; //北京市项目表格样式固定为10列【待优化】
+        for(var i=1;i<=tdNum ;i++) {
             window["td" + i + "trCount"] = 0;
         }
         //获取每一级指标需要合并多少行。注意每一级可能会有多个，如二级指标有三个。无需计算最后一个指标的合并行，都为1。
@@ -174,15 +184,15 @@ TablecommonFn = {
         for(var i = 0;i < trNum ;i ++) {
             //每一行即每一个json对象的键和值都需要动态生成
             var row = {};
-            for(var j = 1;j <= tdNum + 1; j++){
+            for(var j = 1;j <= levelNum + 1; j++){
                 var name = "t" + j; //先自动生成键
                 row[name] = {};
             }
-            data.push(row);   //每次都push一行
+            targetListData.push(row);   //每次都push一行
         }
-        console.log(data);
+        console.log(targetListData);
 
-        //遍历indicatorArray，向data中塞值
+        //遍历indicatorArray，向targetListData中塞值
         for(var i = 0; i< indicatorArray.length; i ++){
             var num = indicatorArray[i].level;
             var tdIndicatorName = "t" + num;
@@ -190,9 +200,9 @@ TablecommonFn = {
             var temp = window[tdIndicatorNameTrCount];
             if(indicatorArray[i].order){ //下一级选择指标渲染
                 var trOrder = indicatorArray[i].order - 1;
-                for (var n in data[trOrder]) {
+                for (var n in targetListData[trOrder]) {
                     if (n == tdIndicatorName) {
-                        data[trOrder][n] = {
+                        targetListData[trOrder][n] = {
                             name: indicatorArray[i].name,
                             weight: indicatorArray[i].weight,
                             rows: indicatorArray[i].rows,
@@ -207,9 +217,9 @@ TablecommonFn = {
                 }
             }else{
                 for(var j = 0; j < indicatorArray[i].rows ; j ++){
-                    for (var n in data[temp]) {
+                    for (var n in targetListData[temp]) {
                         if (n == tdIndicatorName) {
-                            data[temp][n] = {
+                            targetListData[temp][n] = {
                                 name: indicatorArray[i].name,
                                 weight: indicatorArray[i].weight,
                                 rows: indicatorArray[i].rows,
@@ -226,11 +236,11 @@ TablecommonFn = {
             }
 
         }
-        console.log(data);
+        console.log(targetListData);
         //表格左侧json数据转换end
 
         //批量定义
-        for (var i = 1; i <= (tdNum - 1); i++) {
+        for (var i = 1; i <= (levelNum - 1); i++) {
             create_variable(i);
         }
 
@@ -239,8 +249,9 @@ TablecommonFn = {
             window[name];
         }
         //渲染主体表格页面  start
-        $.each(data, function (i, item) {
-            for (var j = 1; j <= (tdNum - 1); j++) { //动态生成当前末级指标的父级指标的所有列
+        $.each(targetListData, function (i, item) {
+            /*第一部分：中期目标********************************************************************************************************************/
+            for (var j = 1; j <= (levelNum - 1); j++) { //动态生成当前末级指标的父级指标的所有列
                 var tdKey = "t" + j;
                 var kpiObject;
                 for (var m in item) {
@@ -255,7 +266,7 @@ TablecommonFn = {
             }
 
             //渲染当前末级指标列start
-            var tdKey = "t" + tdNum;
+            var tdKey = "t" + levelNum;
             var kpiObjectFinal;
             //拿到末级指标对象
             for (var m in item) {
@@ -270,7 +281,7 @@ TablecommonFn = {
             //渲染当前末级指标列end
 
             //渲染下级待选择指标内容start
-            var tdKey = "t" + (tdNum+1);
+            var tdKey = "t" + (levelNum+1);
             var kpiObjectFinalNext;
             //拿到末级指标对象
             for (var m in item) {
@@ -283,11 +294,38 @@ TablecommonFn = {
                     '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
             }else{
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea id="row' + kpiObjectFinal.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" ></textarea>&nbsp;' +  //名称列
                     '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" ></textarea></td>';//单位列
+            }
+            //渲染下级待选择指标内容end
+
+            /*第二部分：年度目标***************************************************************************************************/
+            //t6列：二级指标
+            var tdKey = "t" + 6;
+            if (window[tdKey] == '' || window[tdKey] != kpiObjectFinal.id) {
+                htmlTableBody += '<td class="cc indicator" id="'+ kpiObjectFinal.id +'Name'+ levelNum +'" title="'+ kpiObjectFinal.explain +'" rowspan="' + kpiObjectFinal.rows + '">' + kpiObjectFinal.name  + '</td>';//当前末级指标
+                window[tdKey] = kpiObjectFinal.id;
+            }
+            //渲染当前末级指标列end
+
+            //渲染下级待选择指标内容start
+            if(kpiObjectFinalNext.id){
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea id="row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" >'+ kpiObjectFinalNext.name +'</textarea>&nbsp;' +  //名称列
+                    '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
+                    '</td>';
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
+            }else{
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea id="row' + kpiObjectFinal.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" ></textarea>&nbsp;' +  //名称列
+                    '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
+                    '</td>';
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" ></textarea></td>';//单位列
             }
             //渲染下级待选择指标内容end
 

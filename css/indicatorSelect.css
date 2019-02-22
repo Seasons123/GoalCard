@@ -92,8 +92,13 @@ textarea{
 .indicator{
     color: #545454;
 }
-.tableHeader{
+.goalWhole{
     background: #ddefff;
+    color: #333;
+    text-align: center;
+}
+.goalYear{
+    background: #a8e6f7;
     color: #333;
     text-align: center;
 }
