@@ -63,12 +63,18 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
         /*显示下一级待选择末级指标树*/
         showNextKPIInfo = function(value){
             var id = value.split("num")[0];
-            var idNameTextArea = $("#" + value).prev().attr("id");
+            var classNameTextArea;
+            var classNameTextAreaLocationLength = $("#" + value).prev().attr("class").split(' ').length;
+            if(classNameTextAreaLocationLength == 1){
+                classNameTextArea = $("#" + value).prev().attr("class").split(' ')[0];
+            }else{
+                classNameTextArea = $("#" + value).prev().attr("class").split(' ')[2];
+            }
             var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
             var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
             var queryParams={
                 parentId: id ,
-                nameTextAreaId: idNameTextArea,
+                nameTextAreaClass: classNameTextArea,
                 weightTextAreaId: idWeightTextArea,
                 standardTextAreaId: idStandardTextArea
             };//值传递
@@ -84,7 +90,7 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
                     label: '确定',
                     action:function(){
                         // var id = queryParams.parentId; //末级的父级指标id值
-                        var idFinalKPIOld = queryParams.nameTextAreaId; //选择前末级的id值，名字单元格id
+                        var classFinalKPIOld = queryParams.nameTextAreaClass; //选择前末级的id值，名字单元格id
                         var weightTextAreaIdOld = queryParams.weightTextAreaId; //选择前末级权重值单元格dom元素的id
                         var standardTextAreaIdOld = queryParams.standardTextAreaId; //选择前末级评分标准单元格dom元素的id
 
@@ -95,14 +101,14 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
                         if(idFinalKPI){
                             for(var i=0; i<kpiObjectNextGlobal.length; i++) {
                                 if (kpiObjectNextGlobal[i].id == idFinalKPI) {
-                                    var idFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
+                                    var classFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
                                     var weightTextAreaIdNew =  "row" + idFinalKPI + "colWeight" + commonFn.random(1,100000);
                                     var standardTextAreaIdNew =  "row" + idFinalKPI + "colStandard" + commonFn.random(1,100000);
-                                    $('#' + idFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("id", idFinalKPINew);
+                                    $('.' + classFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("class", classFinalKPINew);
                                     $('#' + weightTextAreaIdOld).attr("id", weightTextAreaIdNew);
                                     $('#' + standardTextAreaIdOld).attr("id", standardTextAreaIdNew);
 
-                                    queryParams.nameTextAreaId = idFinalKPINew; //更新
+                                    queryParams.nameTextAreaClass = classFinalKPINew; //更新
                                     queryParams.weightTextAreaId = weightTextAreaIdNew; //更新
                                     queryParams.standardTextAreaId = standardTextAreaIdNew; //更新
                                     dlg.close();

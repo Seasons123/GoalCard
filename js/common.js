@@ -47,7 +47,6 @@ var commonFn = {
             '</td>';
         trHTML += '<td class="cc '+ id + 'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
         trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
-            '<a class="iconmenu icon-edit editButton"  onclick="commonFn.editContent()" title="修改">' +
             '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
             '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除">' +
             '</td>';//最后一列操作列
