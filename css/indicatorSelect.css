@@ -25,6 +25,8 @@ td textarea{
     width:99%;
     border:none;
     overflow:auto;
+    height: 28px;
+    padding-top: 5px;
 }
 .bb select{
     width:100%;
@@ -118,8 +120,10 @@ input.text{
     border: 1px solid #ccc;
 }
 
-.name,.weight,.standard{
+.name,.weight,.standard,.unit{
     /*background-color: rgb(209, 238, 238);*/
+    text-align: center;
+    border-width: 0;
 }
 .quantify {
     width: 69%;
