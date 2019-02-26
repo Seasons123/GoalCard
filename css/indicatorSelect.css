@@ -220,3 +220,7 @@ a.disabled {
     border: 1px solid #84CCFF;
     border-radius: 4px;
 }
+.kpiObjectFinalNextSpan{
+    display: block;
+    width: 140px;
+}

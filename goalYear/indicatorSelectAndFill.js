@@ -14,8 +14,8 @@ TablecommonFn = {
     initTableHeader: function () {
         //总共的列数为：指标级次数levelNum+5
         var html = '<tr>';
-        html +=  '<th colspan="'+ (levelNum + 3 )+'" class="goalWhole">中期目标</th>';
-        html +=  '<th colspan="'+ (levelNum + 3 )+'" class="goalYear">年度目标</th>';
+        html +=  '<th colspan="'+ (levelNum + 4 )+'" class="goalWhole">中期目标</th>';
+        html +=  '<th colspan="'+ (levelNum + 4 )+'" class="goalYear">年度目标</th>';
         html += '<th id="colOperation" class="goalYear" width="100px" colspan="5" rowspan="2">操作</th>';
         html += '<th id="colOperation" class="goalYear" width="10px" colspan="1" style="display:none;">序号</th>';
         html +=  '</tr>';
@@ -23,13 +23,13 @@ TablecommonFn = {
         for(var i=0; i < levelNum ; i++){
             html += '<th id="colName'+ (i+1) +'" class="goalWhole" width="110px" >' + kpiLevelName[i] + '</th>';
         }
-        html += '<th id="colName'+ (levelNum+1) +'" class="goalWhole" width="210px" >' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
+        html += '<th id="colName'+ (levelNum+1) +'" class="goalWhole" width="200px" colspan="2">' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
         html += '<th id="colWeight" class="goalWhole" width="100px" >指标值<span class="redColor">*</span></th>';
         html += '<th id="colWeight" class="goalWhole" width="100px" >单位</th>';
         for(var i=1; i < levelNum; i++){
             html += '<th id="colName'+ (i+1) +'" class="goalYear" width="110px" >' + kpiLevelName[i] + '</th>';
         }
-        html += '<th id="colName'+ (levelNum+1) +'" class="goalYear" width="110px" >' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
+        html += '<th id="colName'+ (levelNum+1) +'" class="goalYear" width="200px" colspan="2">' + kpiLevelName[levelNum] + '<span class="redColor">*</span></th>';
         html += '<th id="colWeight" class="goalYear" width="100px" >指标值<span class="redColor">*</span></th>';
         html += '<th id="colWeight" class="goalYear" width="100px" >单位</th>';
 
@@ -291,20 +291,24 @@ TablecommonFn = {
                 }
             }
             if(kpiObjectFinalNext.id){
-                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea <textarea  class="easyui-validatebox name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" > required="true" >'+ kpiObjectFinalNext.name +'</textarea>&nbsp;';//名称列
+                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+                    '<span class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" > required="true" >'+ kpiObjectFinalNext.name +'</span>';//名称列
                 htmlTableBody += htmlTargetToBeSelected;
+                htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody += '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</span></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</span></td>';//单位列
             }else{
                 kpiObjectFinalNext = {"id": 1000000}; //防止kpiObjectFinalNext.id的值为undefined
-                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'"><textarea  class=" easyui-validatebox name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" ></textarea>&nbsp;';//名称列
+                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+                    '<span  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" ></span>';//名称列
                 htmlTableBody += htmlTargetToBeSelected;
+                htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//指标值列
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" ></textarea></td>';//单位列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></span></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></span></td>';//单位列
             }
             //渲染下级待选择指标内容end
 
@@ -321,17 +325,19 @@ TablecommonFn = {
             //渲染下级待选择指标内容start
             if(kpiObjectFinalNext.id){
                 htmlTableBody += htmlTargetToBeSelected;
+                htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody +='<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</span></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</span></td>';//单位列
             }else{
                 kpiObjectFinalNext = {"id": 1000000}; //防止kpiObjectFinalNext.id的值为undefined
                 htmlTableBody += htmlTargetToBeSelected;
+                htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody += '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//指标值列
-                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox unit" required="true" onchange="" ></textarea></td>';//单位列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></span></td>';//指标值列
+                htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><span id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></span></td>';//单位列
             }
             //渲染下级待选择指标内容end
 

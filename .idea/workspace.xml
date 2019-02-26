@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f3523b-ce39-4151-9710-5c9a0568c856" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/indicatorSelect.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/indicatorSelect.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html" beforeDir="false" afterPath="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js" beforeDir="false" afterPath="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/showNextKPIInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/showNextKPIInfo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="indicatorSelectAndFill.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indicatorSelectAndFill.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="178" column="74" lean-forward="true" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
+            <state relative-caret-position="72">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -34,18 +34,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indicatorSelectAndFill.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indicatorSelectAndFill.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="170" column="73" lean-forward="true" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
+            <state relative-caret-position="-316">
+              <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-                <element signature="e#109#115#1" expanded="true" />
-                <element signature="e#109#115#1" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indicatorSelect.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/indicatorSelect.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -53,12 +66,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-              <folding>
-                <element signature="e#109#115#1" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="726">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -66,8 +75,8 @@
       <file leaf-file-name="showNextKPIInfo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/showNextKPIInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="71" column="13" lean-forward="true" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -99,7 +108,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cancelBtn</find>
       <find>disable</find>
       <find>color</find>
       <find>dialogContent</find>
@@ -129,6 +137,7 @@
       <find>nameTextArea</find>
       <find>nameTextAreaClass</find>
       <find>idFinalKPINew</find>
+      <find>showNextKPIInfo</find>
     </findStrings>
     <replaceStrings>
       <replace>modalContent</replace>
@@ -160,13 +169,13 @@
         <option value="$PROJECT_DIR$/goalWhole/kpiAdd.css" />
         <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html" />
         <option value="$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js" />
-        <option value="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html" />
-        <option value="$PROJECT_DIR$/css/indicatorSelect.css" />
         <option value="$PROJECT_DIR$/js/public.js" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/1.js" />
         <option value="$PROJECT_DIR$/1.html" />
         <option value="$PROJECT_DIR$/js/showNextKPIInfo.js" />
+        <option value="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html" />
+        <option value="$PROJECT_DIR$/css/indicatorSelect.css" />
         <option value="$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js" />
       </list>
     </option>
@@ -192,12 +201,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoalCard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoalCard" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoalCard" type="b2602c69:ProjectViewProjectNode" />
@@ -218,7 +233,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,17 +304,18 @@
       <workItem from="1550710259106" duration="18745000" />
       <workItem from="1550796062060" duration="11973000" />
       <workItem from="1551058208307" duration="14622000" />
+      <workItem from="1551142819458" duration="8126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197377000" />
+    <option name="totallyTimeSpent" value="205503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12053572" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -347,6 +362,24 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3740">
+          <caret line="170" column="73" lean-forward="true" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -550,16 +583,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-            <element signature="e#109#115#1" expanded="true" />
-            <element signature="e#109#115#1" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/goalWhole/indicatorSelectAndFill.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -587,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/indicatorSelect.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -601,31 +618,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html" />
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="e#109#115#1" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="726">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/showNextKPIInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="71" column="13" lean-forward="true" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -634,29 +638,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html">
+    <entry file="file://$PROJECT_DIR$/css/indicatorSelect.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="178" column="74" lean-forward="true" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="170" column="73" lean-forward="true" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
+        <state relative-caret-position="-316">
+          <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-            <element signature="e#109#115#1" expanded="true" />
-            <element signature="e#109#115#1" expanded="true" />
             <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goalYear/indicatorSelectAndFill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

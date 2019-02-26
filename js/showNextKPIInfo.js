@@ -64,11 +64,12 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
         showNextKPIInfo = function(value){
             var id = value.split("num")[0];
             var classNameTextArea;
-            var classNameTextAreaLocationLength = $("#" + value).prev().attr("class").split(' ').length;
+            var domTextArea = $("#" + value).parent().prev().children();
+            var classNameTextAreaLocationLength = domTextArea.attr("class").split(' ').length;
             if(classNameTextAreaLocationLength == 1){
-                classNameTextArea = $("#" + value).prev().attr("class").split(' ')[0];
+                classNameTextArea = domTextArea.attr("class").split(' ')[0];
             }else{
-                classNameTextArea = $("#" + value).prev().attr("class").split(' ')[2];
+                classNameTextArea = domTextArea.attr("class").split(' ')[2];
             }
             var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
             var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
