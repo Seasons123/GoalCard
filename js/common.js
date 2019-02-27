@@ -39,25 +39,39 @@ var commonFn = {
     addTableRow: function(that){
         var id = that.parentNode.className.split(" ")[1].split("Operation")[0];//当前末级指标的父级id
         var num = parseInt(that.parentNode.parentNode.lastChild.innerHTML);//获取是第几行
-
+        var domKpiObjectFinal = $("." + id + "Name" + levelNum);//末级指标列td格子
+        var htmlTargetToBeSelected ; //待选择指标名称列
         //新增一行start
         var trHTML = "<tr>";
-        trHTML += '<td class="cc '+ id +'Name'+ (levelNum+1) +'"><textarea id="row' + id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) +'" class="easyui-validatebox name" required="true" ></textarea>&nbsp;' +  //名称列
-            '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="commonFn.showNextKPITree(this.id)" title="查看"></a>' +
+        //左表
+        htmlTargetToBeSelected = '<td class="cc '+ id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+            '<textarea  class="kpiObjectFinalNextSpan name row' + id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" ></textarea>';//名称列
+        trHTML += htmlTargetToBeSelected;
+        trHTML += '</td><td style="border-left:0;">';
+        trHTML +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
             '</td>';
-        trHTML += '<td class="cc '+ id + 'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="easyui-validatebox weight" required="true" onchange="" ></textarea></td>';//权重列
+        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
+        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
+        //右表
+        //trHTML += domKpiObjectFinal[0].outerHTML;
+        trHTML += htmlTargetToBeSelected;
+        trHTML += '</td><td style="border-left:0;">';
+        trHTML +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
+            '</td>';
+        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
+        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
         trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
-            '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加">' +
-            '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除">' +
+            '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加"></a>' +
+            '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除"></a>' +
             '</td>';//最后一列操作列
         trHTML += '<td class="serial" colspan="1" style="display:none;"></td>';//序号列
         trHTML += '</tr>';
         //新增一行end
-        $("#select_table tr:eq("+ num +")").after(trHTML);
+        $("#select_table tr:eq("+ (num+1) +")").after(trHTML);
 
         //修改父级的合并行
-        var rowspanOld = $("#"+ id + "Name"+ levelNum).attr("rowspan");
-        $("#"+ id + "Name"+ levelNum).attr("rowspan",parseInt(rowspanOld)+1);
+        var rowspanOld = $("."+ id + "Name"+ levelNum).attr("rowspan");
+        $("."+ id + "Name"+ levelNum).attr("rowspan",parseInt(rowspanOld)+1);
         for(var i=0 ;i<evalContent.length; i++){
             if(evalContent[i].id == id){
                 for(var j=1; j<levelNum; j++){
