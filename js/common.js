@@ -101,39 +101,45 @@ var commonFn = {
             }
         }
         //如果删除的末级行只剩最后一行，只是清空数据不操作，并给出最小删除行的控制提示
-        var rowspanOld = parseInt($("#"+ id + "Name"+ levelNum).attr("rowspan"));//目前直接父级的合并行
+        var rowspanOld = parseInt($("."+ id + "Name"+ levelNum).attr("rowspan"));//目前直接父级的合并行
         if(rowspanOld == 1){
             ip.ipInfoJump("最后一行无法删除","error");
         }else{
             ip.warnJumpMsg('确认删除？',"saveConfirmSureId","saveConfirmCancelCla");
             $('#saveConfirmSureId').on('click',function(){
-                var missing=[];
-                //保存该行
-                var deletedTR = that.parentNode.parentNode;
+                //一.如果删除的是第一行，需要进行的处理
+                var deletedTR = that.parentNode.parentNode;//保存该行
                 var TRCollection = deletedTR.children;
-                for(var i=0; i<TRCollection.length - 5; i++){
-                    missing.push(TRCollection[i]);//保存删除第一行后下一行缺失的列
-                }
-                //保存下一行
-                var deletedTRNext = deletedTR.nextElementSibling;//至少两行的情况下，该行缺失的是：所有父级
-                //删除该行
-                deletedTR.remove();
+                var TRCollectionLength = TRCollection.length; //运行完deletedTRNext.insertBefore(missing[missing.length - 1],deletedTRNext.children[4]); TRCollection的长度会自动减1，不知道为何
+                var deletedTRNext = deletedTR.nextElementSibling;//保存下行，至少两行的情况下，该行缺失的是：左表是所有父级，右表是末级
                 //如果删除的是第一行，把下一行补齐**********************************************************20181222如何判断删除的是第一行
                 //计算第一行总共的列数
                 if(parentKpiChildrenArray[0].id == id){
-                    tdNumOfDeletedRow = levelNum+5; //总共的列数为：指标级次数levelNum+5
+                    tdNumOfDeletedRow = levelNum+11; //总共的列数为：指标级次数levelNum+11
                 }else{
-                    tdNumOfDeletedRow = levelNum+4; //总共的列数为：指标级次数levelNum+4
+                    tdNumOfDeletedRow = levelNum+10; //总共的列数为：指标级次数levelNum+10
                 }
-                if(TRCollection.length == tdNumOfDeletedRow){
+                if(tdNumOfDeletedRow == TRCollectionLength){//如果删除的是第一行
+                    var missing=[];
+                    for(var i=0; i<TRCollection.length - 11; i++){
+                        missing.push(TRCollection[i].cloneNode(true));//保存删除第一行后下一行缺失的列
+                    }
                     //把下一行的缺失列补齐
                     for(var m=missing.length - 1; m>=0; m--){
-                        deletedTRNext.insertBefore(missing[m],deletedTRNext.children[0]);
+                        deletedTRNext.insertBefore(missing[m].cloneNode(true),deletedTRNext.children[0]);
                     }
+                    if(parentKpiChildrenArray[0].id == id){
+                        deletedTRNext.insertBefore(missing[missing.length - 1].cloneNode(true),deletedTRNext.children[6]);
+                    }else{
+                        deletedTRNext.insertBefore(missing[missing.length - 1].cloneNode(true),deletedTRNext.children[5]);
+                    }
+
                 }
-                //修改父级的合并行
-                var rowspanOld = $("#"+ id + "Name"+ levelNum).attr("rowspan");
-                $("#"+ id + "Name"+ levelNum).attr("rowspan",parseInt(rowspanOld)-1);
+                //二.删除该行
+                deletedTR.remove();
+                //三.修改父级的合并行
+                var rowspanOld = $("."+ id + "Name"+ levelNum).attr("rowspan");
+                $("."+ id + "Name"+ levelNum).attr("rowspan",parseInt(rowspanOld)-1);
                 for(var i=0 ;i<evalContent.length; i++){
                     if(evalContent[i].id == id){
                         for(var j=1; j<levelNum; j++){
