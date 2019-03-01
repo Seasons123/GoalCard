@@ -105,7 +105,8 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
                                     var classFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
                                     var weightTextAreaIdNew =  "row" + idFinalKPI + "colWeight" + commonFn.random(1,100000);
                                     var standardTextAreaIdNew =  "row" + idFinalKPI + "colStandard" + commonFn.random(1,100000);
-                                    $('.' + classFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("class", classFinalKPINew);
+                                    $('.' + classFinalKPIOld).removeAttr("readonly").text(kpiObjectNextGlobal[i].kpiName).attr("class", classFinalKPINew);
+                                    $('.' + classFinalKPIOld).eq(1).attr("readonly","readonly").addClass("disabledControl");
                                     $('#' + weightTextAreaIdOld).attr("id", weightTextAreaIdNew);
                                     $('#' + standardTextAreaIdOld).attr("id", standardTextAreaIdNew);
 

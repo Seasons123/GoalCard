@@ -250,7 +250,10 @@ TablecommonFn = {
         }
         //渲染主体表格页面  start
         $.each(targetListData, function (i, item) {
-            var htmlTargetToBeSelected ; //待选择指标名称列
+            var htmlTargetToBeSelected ; //待选择指标名称列，数据库中无保存值
+            var htmlTargetToBeSelectedEmpty; //待选择指标名称列，数据库中有保存值
+            var numRandom1 = commonFn.random(1,100000);
+            var numRandom2 = commonFn.random(1,100000);
             /*第一部分：中期目标********************************************************************************************************************/
             for (var j = 1; j <= (levelNum - 1); j++) { //动态生成当前末级指标的父级指标的所有列
                 var tdKey = "t" + j;
@@ -293,7 +296,7 @@ TablecommonFn = {
             if(kpiObjectFinalNext.id){
                 kpiObjectFinalNext["flag"] = false;
                 htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
-                    '<textarea class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" > required="true" >'+ kpiObjectFinalNext.name +'</textarea>';//名称列
+                    '<textarea class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom1 + '">'+ kpiObjectFinalNext.name +'</textarea>';//名称列
                 htmlTableBody += htmlTargetToBeSelected;
                 htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody += '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
@@ -305,9 +308,9 @@ TablecommonFn = {
                     "id": kpiObjectFinal.id,
                     "flag": true
                 }; //防止kpiObjectFinalNext.id的值为undefined
-                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
-                    '<textarea  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ commonFn.random(1,100000) + '" required="true" ></textarea>';//名称列
-                htmlTableBody += htmlTargetToBeSelected;
+                htmlTargetToBeSelectedEmpty = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+                    '<textarea  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom2 + '"></textarea>';//名称列
+                htmlTableBody += htmlTargetToBeSelectedEmpty;
                 htmlTableBody += '</td><td style="border-left:0;">';
                 htmlTableBody +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
@@ -327,16 +330,20 @@ TablecommonFn = {
 
             //渲染下级待选择指标内容start
             if(kpiObjectFinalNext.flag == false){
+                htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+                    '<textarea class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom1 + ' disabledControl" readonly>'+ kpiObjectFinalNext.name +'</textarea>';//名称列
                 htmlTableBody += htmlTargetToBeSelected;
                 htmlTableBody += '</td><td style="border-left:0;">';
-                htmlTableBody +='<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
+                htmlTableBody +='<a class="iconmenu icon-view-detail radioButton disabledControl" readonly data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" ></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Unit"><textarea id="row' + kpiObjectFinalNext.id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
             }else{
-                htmlTableBody += htmlTargetToBeSelected;
+                htmlTargetToBeSelectedEmpty = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
+                    '<textarea  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom2 + ' disabledControl" readonly></textarea>';//名称列
+                htmlTableBody += htmlTargetToBeSelectedEmpty;
                 htmlTableBody += '</td><td style="border-left:0;">';
-                htmlTableBody += '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
+                htmlTableBody += '<a class="iconmenu icon-view-detail radioButton  disabledControl" readonly data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" ></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Unit"><textarea id="row' + kpiObjectFinalNext.id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列

@@ -131,12 +131,64 @@
             </div>
             <!--第二部分-->
             <div class="title">
+                <i class="title-img"></i>总体目标
+            </div>
+            <hr class="title-hr">
+            <div class="content">
+                <!--第一行-->
+                <div class="col-sm-6">
+                    <div class="col-sm-12">
+                        <span>中期目标 * </span>
+                        <span>(</span>
+                        <select id="yearStart" class="form-control" name="attribute" style="border-color: #ccc;">
+                            <option value="0">请选择</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                        </select>
+                        <span>年—</span>
+                        <select id="yearEnd" class="form-control" name="attribute" style="border-color: #ccc;">
+                            <option value="0">请选择</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                        </select>
+                        <span>)</span>
+                        <span>最多300字</span>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom:10px;">
+                    <div class="col-sm-12">
+                        <span>年度目标 * </span>
+                        <span>(</span>
+                        <select id="year" class="form-control" name="attribute" style="border-color: #ccc;">
+                            <option value="0">请选择</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                        </select>
+                        <span>年度）最多300字</span>
+                    </div>
+                </div>
+                <!--第二行-->
+                <div class="col-sm-6">
+                    <textarea class="form-control col-sm-10 text-left require" id="deblock_udid1" name="deblock_udid" rows="4" style="min-width: 100%">
+                    </textarea>
+                </div>
+                <div class="col-sm-6">
+                    <textarea class="form-control col-sm-10 text-left require" id="deblock_udid2" name="deblock_udid" rows="4" style="min-width: 100%">
+                    </textarea>
+                </div>
+            </div>
+            <br/>
+            <!--第三部分-->
+            <div class="title">
                 <i class="title-img"></i>绩效目标
             </div>
             <hr class="title-hr">
             <form id="indicatorSelectForm" method="post" style="text-align:center">
                 <!--主表-->
-                <table id="select_table" style=" overflow: scroll; width:90%;margin:auto;"  >
+                <table id="select_table" style=" overflow: scroll; width:100%;margin:auto;"  >
                     <thead id="tableHeader">
                     </thead>
                     <tbody id="tableBody" >
