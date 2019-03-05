@@ -53,15 +53,15 @@
                 <!--第一行-->
                 <div class="col-sm-4" style="overflow: auto;">
                     <label class="col-sm-3 text-left pr5 require">项目名称：</label>
-                    <label id="projectId" class="blueColor col-sm-8" style="display: block;height: 30px;">重大科技成果转化和产业化</label>
+                    <label id="projectId" class="blueColor col-sm-8" style="display: block;height: 30px;"></label>
                 </div>
                 <div class="col-sm-4" >
                     <label class="col-sm-3 text-left pr5 require">主管部门：</label>
-                    <label id="departmentId"  class="blueColor" style="display: block;height: 30px;"> 006 北京市科学技术委员会 </label>
+                    <label id="departmentId"  class="blueColor" style="display: block;height: 30px;"> </label>
                 </div>
                 <div class="col-sm-4" >
                     <label class="col-sm-3 text-left pr5 require">实施单位：</label>
-                    <label id="implementId"  class="blueColor" style="display: block;height: 30px;"> 北京市科学技术委员会 </label>
+                    <label id="implementId"  class="blueColor" style="display: block;height: 30px;"> </label>
                 </div>
                 <!--第二行-->
                 <div class="col-sm-6">
@@ -69,8 +69,8 @@
                     <div class="input-group col-sm-8 modal-input-group">
                         <select id="attribute" class="form-control" name="attribute" style="border-color: #ccc;">请选择
                             <option value="0">请选择</option>
-                            <option value="1">一次性</option>
-                            <option value="2">延续性</option>
+                            <option value="001">一次性项目</option>
+                            <option value="002">延续性项目</option>-->
                         </select>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="col-sm-6">
                     <label class="col-sm-3 text-left pr5 require">中期资金总额：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <label id="totalMoney"  class="blueColor"> 0 </label>
+                        <label id="totalMoney"  class="blueColor"> </label>
                         <span >万元</span>
                         <span class="grayColor">=财政拨款（中期）+其他资金（中期）</span>
                     </div>
@@ -93,7 +93,7 @@
                 <div class="col-sm-6">
                     <label class="col-sm-4 text-right pr5 require">年度资金总额：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <label id="yearTotalMoney" class="blueColor"> 387905 </label>
+                        <label id="yearTotalMoney" class="blueColor"></label>
                         <span >万元</span>
                         <span class="grayColor">=财政拨款（年度）+其他资金（年度）</span>
                     </div>
@@ -102,14 +102,14 @@
                 <div class="col-sm-6">
                     <label class="col-sm-3 text-left pr5 require">其中：财政拨款：</label>
                     <div class="input-group col-sm-7 modal-input-group">
-                        <input id="financeGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
+                        <input id="financeGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName" onchange="commonFn.totalMoneyCalculate()">
                     </div>
                     <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
                 </div>
                 <div class="col-sm-6">
                     <label class="col-sm-4 text-right pr5 require">其中：财政拨款<span class="redColor">*</span>：</label>
                     <div class="input-group col-sm-8 modal-input-group">
-                        <label id="yearFinanceGrant" class="blueColor"> 387905 </label>
+                        <label id="yearFinanceGrant" class="blueColor"></label>
                         <span >万元</span>
                     </div>
                 </div>
@@ -117,14 +117,14 @@
                 <div class="col-sm-6">
                     <label class="col-sm-3 text-left pr5 require">其它资金<span class="redColor">*</span>：</label>
                     <div class="input-group col-sm-7 modal-input-group">
-                        <input id="otherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
+                        <input id="otherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName" onchange="commonFn.totalMoneyCalculate()">
                     </div>
                     <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
                 </div>
                 <div class="col-sm-6">
                     <label class="col-sm-4 text-right pr5 require">其它资金<span class="redColor">*</span>：</label>
                     <div class="input-group col-sm-7 modal-input-group">
-                        <input id="yearOtherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName">
+                        <input id="yearOtherGrant" type="text" style="border-color: #ccc;" class="form-control noSpecial" name="kpiName" onchange="commonFn.yearMoneyCalculate()">
                     </div>
                     <label class="col-sm-1 text-left pr5 require" style="display: block;height: 30px;">万元</label>
                 </div>

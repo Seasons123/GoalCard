@@ -389,5 +389,46 @@ var getInfo = function(){
         }
     });
 };
+
+var getBasicInfo = function(){
+    var data = {
+        "id":1,
+        "fetchProperties":"*,supDep[*],agency[*],objAttr[*]"
+    };
+    $.ajax({
+        type: 'get',
+        url: formUrl.BasicInfo,
+        dataType: 'json',
+        data:data,
+        contentType: "application/json; charset=utf-8",
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        async: false,
+        success: function (basicInfoData) {
+            if(basicInfoData.message){
+                $.messager.alert('错误', basicInfoData.message, 'error');
+            }else{
+                console.log(basicInfoData);
+                $('#projectId').html(basicInfoData[0].name); //项目名称
+                $('#departmentId').html(basicInfoData[0].supDep.name); //主管部门
+                $('#implementId').html(basicInfoData[0].agency.name); //实施单位
+                $('#attribute').val(basicInfoData[0].objAttr.code); //项目属性
+                $('#financeGrant').val(basicInfoData[0].mfAmount); //中期财政拨款
+                $('#otherGrant').val(basicInfoData[0].moAmount); //中期其他资金
+                $('#totalMoney').html(basicInfoData[0].mfAmount + basicInfoData[0].moAmount); //中期总金额
+                //$('#totalMoney').html(basicInfoData[0].mtAmount); //中期总金额
+                $('#yearFinanceGrant').html(basicInfoData[0].yfAmount); //年度财政拨款
+                $('#yearOtherGrant').val(basicInfoData[0].yoAmount); //年度其他资金
+                $('#yearTotalMoney').html(basicInfoData[0].yfAmount + basicInfoData[0].yoAmount); //年度总金额
+                //$('#yearTotalMoney').html(basicInfoData[0].ytAmount); //年度总金额
+                $('#projectPeriod').val(basicInfoData[0].objYears); //项目期
+            }
+        }
+    });
+};
+
 commonFn.getSaveTaskKpiDataArray();
+getBasicInfo();
 getInfo();

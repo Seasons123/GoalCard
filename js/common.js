@@ -1,4 +1,3 @@
-
 /* 公共函数类  class commonFn */
 var commonFn = {
     /*取获Json对象的长度*/
@@ -39,8 +38,6 @@ var commonFn = {
     addTableRow: function(that){
         var id = that.parentNode.className.split(" ")[1].split("Operation")[0];//当前末级指标的父级id
         var num = parseInt(that.parentNode.parentNode.lastChild.innerHTML);//获取是第几行
-        var domKpiObjectFinal = $("." + id + "Name" + levelNum);//末级指标列td格子
-        var htmlTargetToBeSelected ; //待选择指标名称列
         //新增一行start
         var numRandom = commonFn.random(1,100000);
         var trHTML = "<tr>";
@@ -298,6 +295,12 @@ var commonFn = {
         $(".addButton").removeClass("disabled");
         $(".removeButton").removeClass("disabled");
         $(".radioButton").removeClass("disabled");
+    },
+    totalMoneyCalculate: function() {
+        $('#totalMoney').html(parseFloat($('#financeGrant').val()) + parseFloat($('#otherGrant').val())); //中期总金额实时计算
+    },
+    yearMoneyCalculate: function() {
+        $('#yearTotalMoney').html(parseFloat($('#yearFinanceGrant').html()) + parseFloat($('#yearOtherGrant').val())); //中期总金额实时计算
     }
 
 
