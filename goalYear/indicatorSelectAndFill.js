@@ -332,19 +332,19 @@ TablecommonFn = {
             //渲染下级待选择指标内容start
             if(kpiObjectFinalNext.flag == false){
                 htmlTargetToBeSelected = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
-                    '<textarea class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom1 + ' disabledControl" readonly>'+ kpiObjectFinalNext.name +'</textarea>';//名称列
+                    '<textarea class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom1 + ' ">'+ kpiObjectFinalNext.name +'</textarea>';//名称列
                 htmlTableBody += htmlTargetToBeSelected;
                 htmlTableBody += '</td><td style="border-left:0;">';
-                htmlTableBody +='<a class="iconmenu icon-view-detail radioButton disabledControl" readonly data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" ></a>' +
+                htmlTableBody +='<a class="iconmenu icon-view-detail radioButton " data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinalNext.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" >'+ kpiObjectFinalNext.weight +'</textarea></td>';//指标值列
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Unit"><textarea id="row' + kpiObjectFinalNext.id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" >'+ kpiObjectFinalNext.unit +'</textarea></td>';//单位列
             }else{
                 htmlTargetToBeSelectedEmpty = '<td class="cc '+ kpiObjectFinal.id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
-                    '<textarea  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom2 + ' disabledControl" readonly></textarea>';//名称列
+                    '<textarea  class="kpiObjectFinalNextSpan name row' + kpiObjectFinalNext.id + 'colName'+ (levelNum + 1) +'num'+ numRandom2 + ' "></textarea>';//名称列
                 htmlTableBody += htmlTargetToBeSelectedEmpty;
                 htmlTableBody += '</td><td style="border-left:0;">';
-                htmlTableBody += '<a class="iconmenu icon-view-detail radioButton  disabledControl" readonly data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" ></a>' +
+                htmlTableBody += '<a class="iconmenu icon-view-detail radioButton " data-toggle="modal" data-target="#dialogContent" id="'+ kpiObjectFinal.id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
                     '</td>';
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Weight"><textarea id="row' + kpiObjectFinal.id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
                 htmlTableBody += '<td class="cc '+ kpiObjectFinal.id +'Unit"><textarea id="row' + kpiObjectFinalNext.id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
@@ -364,7 +364,7 @@ TablecommonFn = {
     }
 };
 
-var getInfo = function(){
+var getGoalInfo = function(){
     var data = {
         "kpiTpl.id":6,
         "fetchProperties":"*,kpi[*,parent[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi1[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi2[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi3[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi4[id,kpiName,kpiWeight,kpiLevel,kpiExplain]]"
@@ -394,7 +394,7 @@ var getBasicInfo = function(){
     var id = 2;
     var data = {
         "fetchProperties":"*,supDep[*],agency[*]"
-    }
+    };
     var getUrl = formUrl.BasicInfo + "/" + id;
     $.ajax({
         type: 'get',
@@ -433,4 +433,4 @@ var getBasicInfo = function(){
 
 commonFn.getSaveTaskKpiDataArray();
 getBasicInfo();
-getInfo();
+getGoalInfo();

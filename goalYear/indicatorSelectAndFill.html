@@ -38,8 +38,14 @@
     <div id="pstable" title="评审表" style="padding:20px; overflow: auto;" >
         <!--startprint1-->
         <div id="baseInfoButton">
-            <button class="btn pe-btn pull-right" id="temSave" type="button" onclick="commonFn.temSave(this.id)">暂存</button>
-            <button class="btn pe-btn pull-right" id="saveAll" type="button" onclick="commonFn.saveAll(this.id)">保存</button>
+            <button class="btn pe-btn pull-left" id="return" type="button" onclick="commonFn.temSave(this.id)">返回</button>
+            <button class="btn pe-btn pull-left" id="temSave" type="button" onclick="commonFn.temSave(this.id)">暂存</button>
+            <button class="btn pe-btn pull-left" id="saveAll" type="button" onclick="commonFn.saveAll(this.id)">保存</button>
+            <button class="btn pe-btn pull-left" id="tableExport" type="button" onclick="commonFn.saveAll(this.id)">表样导出</button>
+            <button class="btn pe-btn pull-left" id="fileImport" type="button" onclick="commonFn.temSave(this.id)">excel文件导入</button>
+            <button class="btn pe-btn pull-left" id="lastYearImport" type="button" onclick="commonFn.saveAll(this.id)">上年目标引用</button>
+            <button class="btn pe-btn pull-left" id="templateSelect" type="button" onclick="commonFn.temSave(this.id)">目标模板选择</button>
+            <button class="btn pe-btn pull-left" id="exportAll" type="button" onclick="commonFn.saveAll(this.id)">导出</button>
         </div>
         <br/>
         <div class="addDiv" id="baseInfo">

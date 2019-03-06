@@ -38,10 +38,10 @@ var commonFn = {
         //右表
         //trHTML += domKpiObjectFinal[0].outerHTML;
         htmlTargetToBeSelectedEmpty = '<td class="cc '+ id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
-            '<textarea  class="kpiObjectFinalNextSpan name row' + id + 'colName'+ (levelNum + 1) +'num'+ numRandom + ' disabledControl" readonly></textarea>';//名称列
+            '<textarea  class="kpiObjectFinalNextSpan name row' + id + 'colName'+ (levelNum + 1) +'num'+ numRandom + ' "></textarea>';//名称列
         trHTML += htmlTargetToBeSelectedEmpty;
         trHTML += '</td><td style="border-left:0;">';
-        trHTML +=  '<a class="iconmenu icon-view-detail radioButton disabledControl" readonly data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'"></a>' +
+        trHTML +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
             '</td>';
         trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
         trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
@@ -305,5 +305,4 @@ var commonFn = {
     yearMoneyCalculate: function() {
         $('#yearTotalMoney').html(parseFloat($('#yearFinanceGrant').html()) + parseFloat($('#yearOtherGrant').val())); //中期总金额实时计算
     }
-
 };
