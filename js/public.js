@@ -31,7 +31,9 @@ switch (sever){
             "KpiTplDetail": 'https://dev81.yonyougov.top/fpe-kpi/api/KpiTplDetail?',
             "QueryNextKpi": 'https://dev81.yonyougov.top/fpe-kpi/api/Kpi?',
             "TaskKpi": 'https://dev81.yonyougov.top/df-peeval/api/TaskKpi?',
-            "BasicInfo":'https://dev81.yonyougov.top/fpe-obj/api/obj?'
+            //"BasicInfo":'https://dev81.yonyougov.top/fpe-obj/api/obj?'
+            "BasicInfo":'https://dev81.yonyougov.top/fpe-obj/api/obj'
+
         };
 
 }

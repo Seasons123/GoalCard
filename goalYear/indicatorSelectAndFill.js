@@ -8,6 +8,7 @@ var htmlTableBody = '<tr>';
 var kpiObjectNextGlobal;
 var kpiObjectNextDataGlobal=[];
 var saveTaskKpiDataArrayResponse = [];
+var basicInfoDataGlobal=[]; //基本情况
 
 TablecommonFn = {
 
@@ -360,7 +361,6 @@ TablecommonFn = {
         //渲染主体表格页面  end
         $('#tableBody').append(htmlTableBody);
         commonFn.initSerial();
-        commonFn.cssStyleControl(saveTaskKpiDataArrayResponse);
     }
 };
 
@@ -391,13 +391,14 @@ var getInfo = function(){
 };
 
 var getBasicInfo = function(){
+    var id = 2;
     var data = {
-        "id":1,
-        "fetchProperties":"*,supDep[*],agency[*],objAttr[*]"
-    };
+        "fetchProperties":"*,supDep[*],agency[*]"
+    }
+    var getUrl = formUrl.BasicInfo + "/" + id;
     $.ajax({
         type: 'get',
-        url: formUrl.BasicInfo,
+        url: getUrl,
         dataType: 'json',
         data:data,
         contentType: "application/json; charset=utf-8",
@@ -411,19 +412,20 @@ var getBasicInfo = function(){
                 $.messager.alert('错误', basicInfoData.message, 'error');
             }else{
                 console.log(basicInfoData);
-                $('#projectId').html(basicInfoData[0].name); //项目名称
-                $('#departmentId').html(basicInfoData[0].supDep.name); //主管部门
-                $('#implementId').html(basicInfoData[0].agency.name); //实施单位
-                $('#attribute').val(basicInfoData[0].objAttr.code); //项目属性
-                $('#financeGrant').val(basicInfoData[0].mfAmount); //中期财政拨款
-                $('#otherGrant').val(basicInfoData[0].moAmount); //中期其他资金
-                $('#totalMoney').html(basicInfoData[0].mfAmount + basicInfoData[0].moAmount); //中期总金额
+                basicInfoDataGlobal = basicInfoData;
+                $('#projectId').html(basicInfoData.name); //项目名称
+                $('#departmentId').html(basicInfoData.supDep.name); //主管部门
+                $('#implementId').html(basicInfoData.agency.name); //实施单位
+                $('#attribute').val(basicInfoData.objAttr); //项目属性
+                $('#financeGrant').val(basicInfoData.mfAmount); //中期财政拨款
+                $('#otherGrant').val(basicInfoData.moAmount); //中期其他资金
+                $('#totalMoney').html(basicInfoData.mfAmount + basicInfoData.moAmount); //中期总金额
                 //$('#totalMoney').html(basicInfoData[0].mtAmount); //中期总金额
-                $('#yearFinanceGrant').html(basicInfoData[0].yfAmount); //年度财政拨款
-                $('#yearOtherGrant').val(basicInfoData[0].yoAmount); //年度其他资金
-                $('#yearTotalMoney').html(basicInfoData[0].yfAmount + basicInfoData[0].yoAmount); //年度总金额
+                $('#yearFinanceGrant').html(basicInfoData.yfAmount); //年度财政拨款
+                $('#yearOtherGrant').val(basicInfoData.yoAmount); //年度其他资金
+                $('#yearTotalMoney').html(basicInfoData.yfAmount + basicInfoData.yoAmount); //年度总金额
                 //$('#yearTotalMoney').html(basicInfoData[0].ytAmount); //年度总金额
-                $('#projectPeriod').val(basicInfoData[0].objYears); //项目期
+                $('#projectPeriod').val(basicInfoData.objYears); //项目期
             }
         }
     });

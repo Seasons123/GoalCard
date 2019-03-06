@@ -38,9 +38,8 @@
     <div id="pstable" title="评审表" style="padding:20px; overflow: auto;" >
         <!--startprint1-->
         <div id="baseInfoButton">
-            <button class="btn pe-btn pull-right" id="cancelBtn" type="button" onclick="commonFn.cancelEvalKPI()">取消</button>
-            <button class="btn pe-btn pull-right" id="submitBtn" type="button" onclick="commonFn.submitSaveTaskKpi()">提交</button>
-            <button class="btn pe-btn pull-right" id="editBtn" type="button" onclick="commonFn.editEvalKPI()">修改</button>
+            <button class="btn pe-btn pull-right" id="temSave" type="button" onclick="commonFn.temSave(this.id)">暂存</button>
+            <button class="btn pe-btn pull-right" id="saveAll" type="button" onclick="commonFn.saveAll(this.id)">保存</button>
         </div>
         <br/>
         <div class="addDiv" id="baseInfo">
@@ -69,8 +68,8 @@
                     <div class="input-group col-sm-8 modal-input-group">
                         <select id="attribute" class="form-control" name="attribute" style="border-color: #ccc;">请选择
                             <option value="0">请选择</option>
-                            <option value="001">一次性项目</option>
-                            <option value="002">延续性项目</option>-->
+                            <option value="1">一次性项目</option>
+                            <option value="2">延续性项目</option>-->
                         </select>
                     </div>
                 </div>

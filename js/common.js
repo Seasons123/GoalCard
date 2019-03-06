@@ -20,21 +20,6 @@ var commonFn = {
     random: function (lower, upper) {
         return Math.floor(Math.random() * (upper - lower)) + lower;
     },
-    /*修改指标选择信息*/
-    editEvalKPI: function () {
-        commonFn.setEdit();
-        $('#saveBtn').removeAttr("disabled");
-        $('#confirmBtn').removeAttr("disabled");
-        $('#editBtn').attr("disabled", "disabled");
-    },
-    //样式控制
-    cssStyleControl: function(data){
-        if(data.length == 0){
-            commonFn.setEdit();
-        }else{
-            commonFn.setReadonly();
-        }
-    },
     addTableRow: function(that){
         var id = that.parentNode.className.split(" ")[1].split("Operation")[0];//当前末级指标的父级id
         var num = parseInt(that.parentNode.parentNode.lastChild.innerHTML);//获取是第几行
@@ -163,8 +148,9 @@ var commonFn = {
             $(this).html(i++);
         })
     },
-    /*提交指标选择信息*/
-    submitSaveTaskKpi : function(){
+
+    //暂存或保存：总体目标+绩效目标
+    saveGaolInfo: function(){
         var saveTaskKpiDataArray = [];
         //把之前数据库中的数据进行逻辑删除
         for(var i=0; i<saveTaskKpiDataArrayResponse.length; i++){
@@ -229,11 +215,53 @@ var commonFn = {
                     ip.ipInfoJump(map.message,"error");
                 }else{
                     commonFn.getSaveTaskKpiDataArray();
-                    commonFn.setReadonly();
                     ip.ipInfoJump("提交成功","info");
                 }
             }
         });
+    },
+
+
+    /*保存所有信息*/
+    saveAll : function(that){
+        var draftFlag; //草稿的字段：draft，暂存是：0，保存时：1
+        if(that == "temSave"){
+            draftFlag = 0;
+        }else if (that == "saveAll"){
+            draftFlag = 1;
+        }
+        //一、暂存或保存：基本情况
+        basicInfoDataGlobal["supDep"] = basicInfoDataGlobal.supDep.id;
+        basicInfoDataGlobal["agency"] = basicInfoDataGlobal.agency.id;
+        basicInfoDataGlobal["objAttr"] = Number($('#attribute').val());
+        basicInfoDataGlobal["name"] = $('#projectId').html();
+        basicInfoDataGlobal["mfAmount"] = $('#financeGrant').val();
+        basicInfoDataGlobal["moAmount"] = $('#otherGrant').val();
+        basicInfoDataGlobal["mtAmount"] = $('#totalMoney').html();
+        basicInfoDataGlobal["yfAmount"] = $('#yearFinanceGrant').html();
+        basicInfoDataGlobal["yoAmount"] = $('#yearOtherGrant').val();
+        basicInfoDataGlobal["ytAmount"] = $('#yearTotalMoney').html();
+        basicInfoDataGlobal["objYears"] = $('#projectPeriod').val();
+        basicInfoDataGlobal["draft"] = draftFlag;
+        $.ajax({
+            type: 'post',
+            url: formUrl.BasicInfo,
+            dataType: 'json',
+            data:JSON.stringify(basicInfoDataGlobal),
+            contentType: "application/json; charset=utf-8",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            async: false,
+            success: function (data) {
+                if(data.message){
+                    $.messager.alert('错误', data.message, 'error');
+                }else{
+                    //alert("bingo");
+                }
+            }
+          });
     },
     /*刷新数据*/
     getSaveTaskKpiDataArray: function () {
@@ -271,38 +299,11 @@ var commonFn = {
             }
         });
     },
-    setReadonly:function() {
-        $('#select_table input:text[id!=createName]').attr("disabled", "disabled");
-        $('#select_table textarea').attr("disabled", "disabled");
-        $('.name').attr("disabled", "disabled").css("background-color", "#f8f8f8");
-        $('.weight').attr("disabled", "disabled").css("background-color", "#f8f8f8");
-        $('.standard').attr("disabled", "disabled").css("background-color", "#f8f8f8");
-
-        $(".editButton").addClass("disabled");
-        $(".addButton").addClass("disabled");
-        $(".removeButton").addClass("disabled");
-        $(".radioButton").addClass("disabled");
-
-    },
-    setEdit: function() {
-        $('#select_table input:text[id!=createName]').removeAttr("disabled");
-        $('#select_table textarea').removeAttr("disabled");
-        $('.name').removeAttr("disabled").css("background-color", "#FFFFFF");
-        $('.weight').removeAttr("disabled").css("background-color", "#FFFFFF");
-        $('.standard').removeAttr("disabled").css("background-color", "#FFFFFF");
-
-        $(".editButton").removeClass("disabled");
-        $(".addButton").removeClass("disabled");
-        $(".removeButton").removeClass("disabled");
-        $(".radioButton").removeClass("disabled");
-    },
     totalMoneyCalculate: function() {
         $('#totalMoney').html(parseFloat($('#financeGrant').val()) + parseFloat($('#otherGrant').val())); //中期总金额实时计算
     },
     yearMoneyCalculate: function() {
         $('#yearTotalMoney').html(parseFloat($('#yearFinanceGrant').html()) + parseFloat($('#yearOtherGrant').val())); //中期总金额实时计算
     }
-
-
 
 };

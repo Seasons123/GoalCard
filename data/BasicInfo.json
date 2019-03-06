@@ -1,0 +1,30 @@
+[
+  {
+    "id":1,
+    "createBy":111,
+    "createDate":"2019-02-23T07:25:48.000+0000",
+    "lastModifiedBy":5000,
+    "lastModifiedDate":"2019-03-02T10:21:39.240+0000",
+    "lastModifiedVersion":26,
+    "code":"001",
+    "name":"人员培训",
+    "objType":1,
+    "status":"002",
+    "objAttr":1,
+    "objPeriod":1,
+    "entityId":1,
+    "startDate":"2019年1月",
+    "endDate":"2019年8月",
+    "mtAmount":220,
+    "mfAmount":110,
+    "moAmount":100,
+    "ytAmount":142,
+    "yfAmount":60,
+    "yoAmount":82,
+    "agency":2,
+    "supDep":7,
+    "region":1709,
+    "setYear":"2019",
+    "remark":null
+  }
+]
