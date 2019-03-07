@@ -261,7 +261,7 @@ var commonFn = {
                 if(data.message){
                     $.messager.alert('错误', data.message, 'error');
                 }else{
-                    alert("基本情况保存成功");
+                    //alert("基本情况保存成功");
                     commonFn.saveGaolInfo();
                 }
             }
@@ -270,17 +270,15 @@ var commonFn = {
     /*刷新数据*/
     getSaveTaskKpiDataArray: function () {
         var data = {
-            "evalObject.id":1,
-            "evalTask.id":1,
-            "isValid":1,
-            "fetchProperties":"*,kpi[*,parent[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi1[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi2[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi3[id,kpiName,kpiWeight,kpiLevel,kpiExplain],parentKpi4[id,kpiName,kpiWeight,kpiLevel,kpiExplain]]",
+            "dataStatus":1,
+            "fetchProperties":"*,goalVer[*],kpi[*]",
             "sort":"orderNum,asc",
             "page":0,
             "size":100000
         };
         $.ajax({
             type: 'GET',
-            url: formUrl.TaskKpi,
+            url: formUrl.GoalKpi,
             dataType: 'json',
             data:data,
             contentType: "application/json; charset=utf-8",
