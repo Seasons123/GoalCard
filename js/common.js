@@ -292,9 +292,9 @@ var commonFn = {
                     ip.ipInfoJump(map.message,"error");
                 }else{
                     saveGaolKpiDataArrayResponse = map;
-                    //后台传来的orderNum只能保证大小顺序，不能保证连续和从1排
+                    //后台传来的displayOrder只能保证大小顺序，不能保证连续和从1排
                     for(var i=0; i<saveGaolKpiDataArrayResponse.length ; i++){
-                        saveGaolKpiDataArrayResponse[i].orderNum = i+1;
+                        saveGaolKpiDataArrayResponse[i].displayOrder = i+1;
                     }
                     console.log(saveGaolKpiDataArrayResponse);
                 }
