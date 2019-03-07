@@ -25,6 +25,8 @@ var commonFn = {
         var num = parseInt(that.parentNode.parentNode.lastChild.innerHTML);//获取是第几行
         //新增一行start
         var numRandom = commonFn.random(1,100000);
+        var numRandomWeight = commonFn.random(1,100000);
+        var numRandomUnit = commonFn.random(1,100000);
         var trHTML = "<tr>";
         //左表
         htmlTargetToBeSelectedEmpty = '<td class="cc '+ id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
@@ -33,8 +35,8 @@ var commonFn = {
         trHTML += '</td><td style="border-left:0;">';
         trHTML +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
             '</td>';
-        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
-        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
+        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ numRandomWeight +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
+        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ numRandomUnit +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
         //右表
         //trHTML += domKpiObjectFinal[0].outerHTML;
         htmlTargetToBeSelectedEmpty = '<td class="cc '+ id +'Name'+ (levelNum+1) +'" style="border-right:0;">' +
@@ -43,8 +45,8 @@ var commonFn = {
         trHTML += '</td><td style="border-left:0;">';
         trHTML +=  '<a class="iconmenu icon-view-detail radioButton" data-toggle="modal" data-target="#dialogContent" id="'+ id  +'num'+ commonFn.random(1,100000) +'" onclick="showNextKPIInfo(this.id)" title="查看"></a>' +
             '</td>';
-        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ commonFn.random(1,100000) +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
-        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ commonFn.random(1,100000) +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
+        trHTML += '<td class="cc '+ id +'Weight"><textarea id="row' + id + 'colWeight'+ numRandomWeight +'" class="weight" required="true" onchange="" ></textarea></td>';//指标值列
+        trHTML += '<td class="cc '+ id +'Unit"><textarea id="row' + id + 'colUnit'+ numRandomUnit +'" class="unit" required="true" onchange="" ></textarea></td>';//单位列
         trHTML += '<td class="cc '+ id +'Operation" colspan="5">' +
             '<a class="iconmenu icon-input addButton"  onclick="commonFn.addTableRow(this)" title="增加"></a>' +
             '<a class="iconmenu icon-delete removeButton"  onclick="commonFn.removeTableRow(this)" title="删除"></a>' +
@@ -151,59 +153,60 @@ var commonFn = {
 
     //暂存或保存：总体目标+绩效目标
     saveGaolInfo: function(){
-        var saveTaskKpiDataArray = [];
+        var saveGoal = {
+            "goal":{},
+            "goalVer":{},
+            "goalKpiList":[]
+        };
+        //第一步：保存goal对象的信息
+        var goalTS = {};
+        goalTS["obj"] = 2;  //评价对象的id，同getBasicInfo方法中的id
+        goalTS["objType"] = basicInfoDataGlobal.objType; //评价类型
+        goalTS["setYear"] = Number($('#year').val()); //当前年度
+        saveGoal.goal = goalTS;
+
+        //第二步：保存goalVer对象的信息
+        var goalVerTS = {};
+        goalVerTS["starDate"] = $('#yearStart').val(); //开始时间
+        goalVerTS["endDate"] = $('#yearEnd').val(); //结束时间
+        goalVerTS["yearGoal"] = $('#yearGoalContent').val();  //中期目标内容
+        goalVerTS["mtGoal"] = $('#mtGoalContent').val(); //年度目标内容
+        saveGoal.goalVer = goalVerTS;
+
+        //第三步：保存goalKpiList数组对象的信息
         //把之前数据库中的数据进行逻辑删除
-        for(var i=0; i<saveTaskKpiDataArrayResponse.length; i++){
+       /* for(var i=0; i<saveGaolKpiDataArrayResponse.length; i++){
             var taskAPI = {};
-            taskAPI["lastModifiedVersion"] = 0;
-            taskAPI["createBy"] = "101";
-            taskAPI["createDate"] = "2018-11-12T02:31:18.019+0000";
-            taskAPI["lastModifiedBy"] = "101";
-            taskAPI["lastModifiedDate"] = "2018-11-12T02:31:18.019+0000";
-            taskAPI["id"] = saveTaskKpiDataArrayResponse[i].id; //请求参数中有id代表修改操作，无id代表新增操作
-            taskAPI["isValid"] = 0;
-            saveTaskKpiDataArray.push(taskAPI);
-        }
-        //要保存到数据库中的所有数据
+            taskAPI["lastModifiedVersion"] = saveGaolKpiDataArrayResponse[i].lastModifiedVersion;
+            taskAPI["id"] = saveGaolKpiDataArrayResponse[i].id; //请求参数中有id代表修改操作，无id代表新增操作
+            taskAPI["dataStatus"] = 0;
+            saveGoal.goalKpiList.push(taskAPI);
+        }*/
+        //要保存到数据库中的所有数据（每次保存都是新增）
         $(".serial").each(function(){
             var order_num = parseInt($(this).html());
-            var nameDomID = $(this).prev().prev().prev().prev().children().val();
-            var weightDomID = $(this).prev().prev().prev().children().attr("id");
-            var standardDomID= $(this).prev().prev().children().attr("id");
-            var kpi_id = parseInt(weightDomID.split("colWeight")[0].split("row")[1]); //微服务版接口定义，kpi的id是int类型
+            var nameDomID = $(this).prev().prev().prev().prev().prev().children().val(); //指标名称列
+            var weightDomClass = $(this).prev().prev().prev().children().attr("class"); //中期目标值列、年度目标值列的class
+            var unitDomClass = $(this).prev().prev().children().attr("class"); //目标单位列
+            var kpi_id = parseInt(weightDomClass.split("colWeight")[0].split("row")[1]); //微服务版接口定义，kpi的id是int类型
             if(nameDomID){
                 var taskAPI = {};
-                taskAPI["lastModifiedVersion"] = 0;
-                taskAPI["createBy"] = "101";
-                taskAPI["createDate"] = "2018-11-12T02:31:18.019+0000";
-                taskAPI["lastModifiedBy"] = "101";
-                taskAPI["lastModifiedDate"] = "2018-11-12T02:31:18.019+0000";
-                taskAPI["orderNum"] = order_num;
-                taskAPI["evalObject"] = { //这个对象值是上流页面带过来的信息
-                    "id":1,
-                    "lastModifiedVersion":0
-                };
-                taskAPI["evalTask"] = { //这个对象值是上流页面带过来的信息
-                    "id":1,
-                    "lastModifiedVersion":0
-                };
-                taskAPI["kpi"] = {
-                    "id":kpi_id,
-                    "lastModifiedVersion":0
-                };
-                taskAPI["kpiWeight"] = $('#' + weightDomID).val();
-                taskAPI["kpiStandard"] = $('#' + standardDomID).val();
-                taskAPI["remark"] = "";
-                taskAPI["isValid"] = 1;
-                saveTaskKpiDataArray.push(taskAPI);
+                taskAPI["displayOrder"] = order_num;
+                taskAPI["kpi"] = kpi_id;
+                taskAPI["mtGoalVal"] = $($('.' + weightDomClass)[0]).val();//中期目标值
+                taskAPI["goalVal"] = $($('.' + weightDomClass)[1]).val();//年度目标值
+                //taskAPI["unit"] = $('#' + unitDomClass).val(); //暂时不保存这个字段
+                taskAPI["dataStatus"] = 1; //1是有效，0是删除
+                taskAPI["remark"] = $('#' + unitDomClass).val(); //暂时把单位存入备注中
+                saveGoal.goalKpiList.push(taskAPI);
             }
         });
-        console.log(JSON.stringify(saveTaskKpiDataArray));
+        console.log(JSON.stringify(saveGoal));
         $.ajax({
             type: 'POST',
-            url: formUrl.TaskKpi,
+            url: formUrl.SaveGaol,
             dataType: 'json',
-            data: JSON.stringify(saveTaskKpiDataArray),
+            data: JSON.stringify(saveGoal),
             contentType: "application/json; charset=utf-8",
             xhrFields: {
                 withCredentials: true
@@ -214,7 +217,7 @@ var commonFn = {
                 if(map.message){
                     ip.ipInfoJump(map.message,"error");
                 }else{
-                    commonFn.getSaveTaskKpiDataArray();
+                    //commonFn.getSaveTaskKpiDataArray();
                     ip.ipInfoJump("提交成功","info");
                 }
             }
@@ -258,7 +261,8 @@ var commonFn = {
                 if(data.message){
                     $.messager.alert('错误', data.message, 'error');
                 }else{
-                    //alert("bingo");
+                    alert("基本情况保存成功");
+                    commonFn.saveGaolInfo();
                 }
             }
           });
@@ -289,12 +293,12 @@ var commonFn = {
                 if(map.message){
                     ip.ipInfoJump(map.message,"error");
                 }else{
-                    saveTaskKpiDataArrayResponse = map;
+                    saveGaolKpiDataArrayResponse = map;
                     //后台传来的orderNum只能保证大小顺序，不能保证连续和从1排
-                    for(var i=0; i<saveTaskKpiDataArrayResponse.length ; i++){
-                        saveTaskKpiDataArrayResponse[i].orderNum = i+1;
+                    for(var i=0; i<saveGaolKpiDataArrayResponse.length ; i++){
+                        saveGaolKpiDataArrayResponse[i].orderNum = i+1;
                     }
-                    console.log(saveTaskKpiDataArrayResponse);
+                    console.log(saveGaolKpiDataArrayResponse);
                 }
             }
         });

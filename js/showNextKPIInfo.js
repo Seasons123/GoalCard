@@ -71,8 +71,8 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
             }else{
                 classNameTextArea = domTextArea.attr("class").split(' ')[2];
             }
-            var idWeightTextArea = $("#" + value).parent().next().children().attr("id");
-            var idStandardTextArea = $("#" + value).parent().next().next().children().attr("id");
+            var idWeightTextArea = $("#" + value).parent().next().children().attr("class").split(' ')[0];
+            var idStandardTextArea = $("#" + value).parent().next().next().children().attr("class").split(' ')[0];
             var queryParams={
                 parentId: id ,
                 nameTextAreaClass: classNameTextArea,
@@ -105,10 +105,9 @@ require(['jquery', 'knockout', 'bootstrap', 'uui', 'grid', 'ip'],
                                     var classFinalKPINew =  "row" + idFinalKPI + "num" + commonFn.random(1,100000); //有可能末级指标重复选择，保证dom元素id值唯一性
                                     var weightTextAreaIdNew =  "row" + idFinalKPI + "colWeight" + commonFn.random(1,100000);
                                     var standardTextAreaIdNew =  "row" + idFinalKPI + "colStandard" + commonFn.random(1,100000);
-                                    $('.' + classFinalKPIOld).removeAttr("readonly").text(kpiObjectNextGlobal[i].kpiName).attr("class", classFinalKPINew);
-                                    $('.' + classFinalKPIOld).eq(1).attr("readonly","readonly").addClass("disabledControl");
-                                    $('#' + weightTextAreaIdOld).attr("id", weightTextAreaIdNew);
-                                    $('#' + standardTextAreaIdOld).attr("id", standardTextAreaIdNew);
+                                    $('.' + classFinalKPIOld).text(kpiObjectNextGlobal[i].kpiName).attr("class", classFinalKPINew);
+                                    $('.' + weightTextAreaIdOld).attr("class", weightTextAreaIdNew);
+                                    $('.' + standardTextAreaIdOld).attr("class", standardTextAreaIdNew);
 
                                     queryParams.nameTextAreaClass = classFinalKPINew; //更新
                                     queryParams.weightTextAreaId = weightTextAreaIdNew; //更新
